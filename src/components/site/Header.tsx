@@ -43,7 +43,7 @@ export function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="container-page flex h-18 items-center justify-between py-4">
+      <div className="container-page flex h-20 items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-2.5 group">
           <span className="grid h-10 w-10 place-items-center rounded-xl gradient-brand text-white font-display font-bold shadow-elegant">
             D
