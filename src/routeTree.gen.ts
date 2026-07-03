@@ -9,7 +9,9 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SolucoesRouteImport } from './routes/solucoes'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SolucoesIndexRouteImport } from './routes/solucoes.index'
 import { Route as SolucoesTotvsRmRouteImport } from './routes/solucoes.totvs-rm'
 import { Route as SolucoesTotvsProtheusRouteImport } from './routes/solucoes.totvs-protheus'
 import { Route as SolucoesSuporteRouteImport } from './routes/solucoes.suporte'
@@ -17,50 +19,62 @@ import { Route as SolucoesEngenhariaDadosRouteImport } from './routes/solucoes.e
 import { Route as SolucoesDesenvolvimentoRouteImport } from './routes/solucoes.desenvolvimento'
 import { Route as SolucoesBiRouteImport } from './routes/solucoes.bi'
 
+const SolucoesRoute = SolucoesRouteImport.update({
+  id: '/solucoes',
+  path: '/solucoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SolucoesIndexRoute = SolucoesIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => SolucoesRoute,
+} as any)
 const SolucoesTotvsRmRoute = SolucoesTotvsRmRouteImport.update({
-  id: '/solucoes/totvs-rm',
-  path: '/solucoes/totvs-rm',
-  getParentRoute: () => rootRouteImport,
+  id: '/totvs-rm',
+  path: '/totvs-rm',
+  getParentRoute: () => SolucoesRoute,
 } as any)
 const SolucoesTotvsProtheusRoute = SolucoesTotvsProtheusRouteImport.update({
-  id: '/solucoes/totvs-protheus',
-  path: '/solucoes/totvs-protheus',
-  getParentRoute: () => rootRouteImport,
+  id: '/totvs-protheus',
+  path: '/totvs-protheus',
+  getParentRoute: () => SolucoesRoute,
 } as any)
 const SolucoesSuporteRoute = SolucoesSuporteRouteImport.update({
-  id: '/solucoes/suporte',
-  path: '/solucoes/suporte',
-  getParentRoute: () => rootRouteImport,
+  id: '/suporte',
+  path: '/suporte',
+  getParentRoute: () => SolucoesRoute,
 } as any)
 const SolucoesEngenhariaDadosRoute = SolucoesEngenhariaDadosRouteImport.update({
-  id: '/solucoes/engenharia-dados',
-  path: '/solucoes/engenharia-dados',
-  getParentRoute: () => rootRouteImport,
+  id: '/engenharia-dados',
+  path: '/engenharia-dados',
+  getParentRoute: () => SolucoesRoute,
 } as any)
 const SolucoesDesenvolvimentoRoute = SolucoesDesenvolvimentoRouteImport.update({
-  id: '/solucoes/desenvolvimento',
-  path: '/solucoes/desenvolvimento',
-  getParentRoute: () => rootRouteImport,
+  id: '/desenvolvimento',
+  path: '/desenvolvimento',
+  getParentRoute: () => SolucoesRoute,
 } as any)
 const SolucoesBiRoute = SolucoesBiRouteImport.update({
-  id: '/solucoes/bi',
-  path: '/solucoes/bi',
-  getParentRoute: () => rootRouteImport,
+  id: '/bi',
+  path: '/bi',
+  getParentRoute: () => SolucoesRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/solucoes': typeof SolucoesRouteWithChildren
   '/solucoes/bi': typeof SolucoesBiRoute
   '/solucoes/desenvolvimento': typeof SolucoesDesenvolvimentoRoute
   '/solucoes/engenharia-dados': typeof SolucoesEngenhariaDadosRoute
   '/solucoes/suporte': typeof SolucoesSuporteRoute
   '/solucoes/totvs-protheus': typeof SolucoesTotvsProtheusRoute
   '/solucoes/totvs-rm': typeof SolucoesTotvsRmRoute
+  '/solucoes/': typeof SolucoesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -70,27 +84,32 @@ export interface FileRoutesByTo {
   '/solucoes/suporte': typeof SolucoesSuporteRoute
   '/solucoes/totvs-protheus': typeof SolucoesTotvsProtheusRoute
   '/solucoes/totvs-rm': typeof SolucoesTotvsRmRoute
+  '/solucoes': typeof SolucoesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/solucoes': typeof SolucoesRouteWithChildren
   '/solucoes/bi': typeof SolucoesBiRoute
   '/solucoes/desenvolvimento': typeof SolucoesDesenvolvimentoRoute
   '/solucoes/engenharia-dados': typeof SolucoesEngenhariaDadosRoute
   '/solucoes/suporte': typeof SolucoesSuporteRoute
   '/solucoes/totvs-protheus': typeof SolucoesTotvsProtheusRoute
   '/solucoes/totvs-rm': typeof SolucoesTotvsRmRoute
+  '/solucoes/': typeof SolucoesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/solucoes'
     | '/solucoes/bi'
     | '/solucoes/desenvolvimento'
     | '/solucoes/engenharia-dados'
     | '/solucoes/suporte'
     | '/solucoes/totvs-protheus'
     | '/solucoes/totvs-rm'
+    | '/solucoes/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -100,29 +119,34 @@ export interface FileRouteTypes {
     | '/solucoes/suporte'
     | '/solucoes/totvs-protheus'
     | '/solucoes/totvs-rm'
+    | '/solucoes'
   id:
     | '__root__'
     | '/'
+    | '/solucoes'
     | '/solucoes/bi'
     | '/solucoes/desenvolvimento'
     | '/solucoes/engenharia-dados'
     | '/solucoes/suporte'
     | '/solucoes/totvs-protheus'
     | '/solucoes/totvs-rm'
+    | '/solucoes/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  SolucoesBiRoute: typeof SolucoesBiRoute
-  SolucoesDesenvolvimentoRoute: typeof SolucoesDesenvolvimentoRoute
-  SolucoesEngenhariaDadosRoute: typeof SolucoesEngenhariaDadosRoute
-  SolucoesSuporteRoute: typeof SolucoesSuporteRoute
-  SolucoesTotvsProtheusRoute: typeof SolucoesTotvsProtheusRoute
-  SolucoesTotvsRmRoute: typeof SolucoesTotvsRmRoute
+  SolucoesRoute: typeof SolucoesRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/solucoes': {
+      id: '/solucoes'
+      path: '/solucoes'
+      fullPath: '/solucoes'
+      preLoaderRoute: typeof SolucoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -130,59 +154,85 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/solucoes/': {
+      id: '/solucoes/'
+      path: '/'
+      fullPath: '/solucoes/'
+      preLoaderRoute: typeof SolucoesIndexRouteImport
+      parentRoute: typeof SolucoesRoute
+    }
     '/solucoes/totvs-rm': {
       id: '/solucoes/totvs-rm'
-      path: '/solucoes/totvs-rm'
+      path: '/totvs-rm'
       fullPath: '/solucoes/totvs-rm'
       preLoaderRoute: typeof SolucoesTotvsRmRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof SolucoesRoute
     }
     '/solucoes/totvs-protheus': {
       id: '/solucoes/totvs-protheus'
-      path: '/solucoes/totvs-protheus'
+      path: '/totvs-protheus'
       fullPath: '/solucoes/totvs-protheus'
       preLoaderRoute: typeof SolucoesTotvsProtheusRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof SolucoesRoute
     }
     '/solucoes/suporte': {
       id: '/solucoes/suporte'
-      path: '/solucoes/suporte'
+      path: '/suporte'
       fullPath: '/solucoes/suporte'
       preLoaderRoute: typeof SolucoesSuporteRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof SolucoesRoute
     }
     '/solucoes/engenharia-dados': {
       id: '/solucoes/engenharia-dados'
-      path: '/solucoes/engenharia-dados'
+      path: '/engenharia-dados'
       fullPath: '/solucoes/engenharia-dados'
       preLoaderRoute: typeof SolucoesEngenhariaDadosRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof SolucoesRoute
     }
     '/solucoes/desenvolvimento': {
       id: '/solucoes/desenvolvimento'
-      path: '/solucoes/desenvolvimento'
+      path: '/desenvolvimento'
       fullPath: '/solucoes/desenvolvimento'
       preLoaderRoute: typeof SolucoesDesenvolvimentoRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof SolucoesRoute
     }
     '/solucoes/bi': {
       id: '/solucoes/bi'
-      path: '/solucoes/bi'
+      path: '/bi'
       fullPath: '/solucoes/bi'
       preLoaderRoute: typeof SolucoesBiRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof SolucoesRoute
     }
   }
 }
 
-const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
+interface SolucoesRouteChildren {
+  SolucoesBiRoute: typeof SolucoesBiRoute
+  SolucoesDesenvolvimentoRoute: typeof SolucoesDesenvolvimentoRoute
+  SolucoesEngenhariaDadosRoute: typeof SolucoesEngenhariaDadosRoute
+  SolucoesSuporteRoute: typeof SolucoesSuporteRoute
+  SolucoesTotvsProtheusRoute: typeof SolucoesTotvsProtheusRoute
+  SolucoesTotvsRmRoute: typeof SolucoesTotvsRmRoute
+  SolucoesIndexRoute: typeof SolucoesIndexRoute
+}
+
+const SolucoesRouteChildren: SolucoesRouteChildren = {
   SolucoesBiRoute: SolucoesBiRoute,
   SolucoesDesenvolvimentoRoute: SolucoesDesenvolvimentoRoute,
   SolucoesEngenhariaDadosRoute: SolucoesEngenhariaDadosRoute,
   SolucoesSuporteRoute: SolucoesSuporteRoute,
   SolucoesTotvsProtheusRoute: SolucoesTotvsProtheusRoute,
   SolucoesTotvsRmRoute: SolucoesTotvsRmRoute,
+  SolucoesIndexRoute: SolucoesIndexRoute,
+}
+
+const SolucoesRouteWithChildren = SolucoesRoute._addFileChildren(
+  SolucoesRouteChildren,
+)
+
+const rootRouteChildren: RootRouteChildren = {
+  IndexRoute: IndexRoute,
+  SolucoesRoute: SolucoesRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
