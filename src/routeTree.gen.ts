@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SolucoesIndexRouteImport } from './routes/solucoes.index'
 import { Route as SolucoesTotvsRmRouteImport } from './routes/solucoes.totvs-rm'
 import { Route as SolucoesTotvsProtheusRouteImport } from './routes/solucoes.totvs-protheus'
 import { Route as SolucoesSuporteRouteImport } from './routes/solucoes.suporte'
@@ -20,6 +21,11 @@ import { Route as SolucoesBiRouteImport } from './routes/solucoes.bi'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolucoesIndexRoute = SolucoesIndexRouteImport.update({
+  id: '/solucoes/',
+  path: '/solucoes/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SolucoesTotvsRmRoute = SolucoesTotvsRmRouteImport.update({
@@ -61,6 +67,7 @@ export interface FileRoutesByFullPath {
   '/solucoes/suporte': typeof SolucoesSuporteRoute
   '/solucoes/totvs-protheus': typeof SolucoesTotvsProtheusRoute
   '/solucoes/totvs-rm': typeof SolucoesTotvsRmRoute
+  '/solucoes/': typeof SolucoesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -70,6 +77,7 @@ export interface FileRoutesByTo {
   '/solucoes/suporte': typeof SolucoesSuporteRoute
   '/solucoes/totvs-protheus': typeof SolucoesTotvsProtheusRoute
   '/solucoes/totvs-rm': typeof SolucoesTotvsRmRoute
+  '/solucoes': typeof SolucoesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -80,6 +88,7 @@ export interface FileRoutesById {
   '/solucoes/suporte': typeof SolucoesSuporteRoute
   '/solucoes/totvs-protheus': typeof SolucoesTotvsProtheusRoute
   '/solucoes/totvs-rm': typeof SolucoesTotvsRmRoute
+  '/solucoes/': typeof SolucoesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -91,6 +100,7 @@ export interface FileRouteTypes {
     | '/solucoes/suporte'
     | '/solucoes/totvs-protheus'
     | '/solucoes/totvs-rm'
+    | '/solucoes/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -100,6 +110,7 @@ export interface FileRouteTypes {
     | '/solucoes/suporte'
     | '/solucoes/totvs-protheus'
     | '/solucoes/totvs-rm'
+    | '/solucoes'
   id:
     | '__root__'
     | '/'
@@ -109,6 +120,7 @@ export interface FileRouteTypes {
     | '/solucoes/suporte'
     | '/solucoes/totvs-protheus'
     | '/solucoes/totvs-rm'
+    | '/solucoes/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -119,6 +131,7 @@ export interface RootRouteChildren {
   SolucoesSuporteRoute: typeof SolucoesSuporteRoute
   SolucoesTotvsProtheusRoute: typeof SolucoesTotvsProtheusRoute
   SolucoesTotvsRmRoute: typeof SolucoesTotvsRmRoute
+  SolucoesIndexRoute: typeof SolucoesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -128,6 +141,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solucoes/': {
+      id: '/solucoes/'
+      path: '/solucoes'
+      fullPath: '/solucoes/'
+      preLoaderRoute: typeof SolucoesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/solucoes/totvs-rm': {
@@ -183,6 +203,7 @@ const rootRouteChildren: RootRouteChildren = {
   SolucoesSuporteRoute: SolucoesSuporteRoute,
   SolucoesTotvsProtheusRoute: SolucoesTotvsProtheusRoute,
   SolucoesTotvsRmRoute: SolucoesTotvsRmRoute,
+  SolucoesIndexRoute: SolucoesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

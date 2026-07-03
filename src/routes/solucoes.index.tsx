@@ -3,7 +3,7 @@ import { Boxes, Building2, BarChart3, Database, Code2, Cloud, ArrowRight } from 
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHero } from "@/components/site/PageHero";
 
-export const Route = createFileRoute("/solucoes")({
+export const Route = createFileRoute("/solucoes/")({
   head: () => ({
     meta: [
       { title: "Soluções — Consultoria em Tecnologia | DataLynk" },
