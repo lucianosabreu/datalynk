@@ -72,7 +72,7 @@ export function SolutionDetail({
             <h2 className="font-display font-bold text-3xl md:text-4xl text-brand max-w-2xl leading-tight">{sec.title}</h2>
             <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {sec.items.map((it) => (
-                <div key={it.title} className="rounded-2xl bg-white p-6 border border-border/60 shadow-elegant/50 hover:-translate-y-1 transition">
+                <div key={it.title} className="rounded-2xl bg-white p-6 border border-border/60 shadow-elegant hover:-translate-y-1 transition">
                   {it.icon && (
                     <div className="grid h-11 w-11 place-items-center rounded-xl bg-brand/5 text-brand mb-4">
                       <it.icon className="h-5 w-5" />
