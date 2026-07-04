@@ -54,13 +54,7 @@ export function Header() {
     }}
   />
 </Link>
-  <img
-    src="/logo.png"
-    alt="DataLynk"
-    className="h-14 w-auto"
-  />
-</Link>
-
+ 
         <nav className="hidden lg:flex items-center gap-1">
           {nav.map((item) =>
             item.children ? (
