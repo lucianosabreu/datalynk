@@ -36,21 +36,26 @@ export function Header() {
   }, []);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/85 backdrop-blur-xl shadow-[0_1px_0_rgba(18,59,102,0.06)]"
-          : "bg-transparent"
-      }`}
-    >
-<Link to="/" className="flex items-center">
-  <img
-    src="/logo.png"
-    alt="DataLynk"
-    width={220}
-    height={70}
-  />
-</Link>
+  <header
+    className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+      scrolled
+        ? "bg-white/85 backdrop-blur-xl shadow-[0_1px_0_rgba(18,59,102,0.06)]"
+        : "bg-transparent"
+    }`}
+  >
+    <div className="container-page flex h-20 items-center justify-between py-4">
+
+      {/* LOGO */}
+      <Link to="/" className="flex items-center">
+        <img
+          src="/logo.png"
+          alt="DataLynk"
+          className="h-14 w-auto"
+        />
+      </Link>
+
+      {/* MENU DESKTOP */}
+      <nav className="hidden lg:flex items-center gap-1">
  
         <nav className="hidden lg:flex items-center gap-1">
           {nav.map((item) =>
