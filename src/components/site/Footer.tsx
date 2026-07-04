@@ -5,27 +5,25 @@ export function Footer() {
   return (
     <footer className="gradient-brand text-white">
       <div className="container-page py-16 grid gap-12 lg:grid-cols-12">
+
+        {/* LOGO + DESCRIÇÃO */}
         <div className="lg:col-span-4 space-y-5">
+
           <div className="flex items-center gap-3">
-  <Link to="/" className="flex items-center">
-    <img
-      src="/logo.png"
-      alt="DataLynk"
-      className="h-14 w-auto"
-    />
-  </Link>
-</div>
-            <div>
-              <div className="font-display font-bold text-xl">DataLynk</div>
-              <div className="text-[10px] uppercase tracking-[0.2em] text-white/70">
-                Consultoria em Tecnologia
-              </div>
-            </div>
+            <Link to="/" className="flex items-center">
+              <img
+                src="/logo.png"
+                alt="DataLynk"
+                className="h-12 w-auto"
+              />
+            </Link>
           </div>
+
           <p className="text-white/75 text-sm leading-relaxed max-w-sm">
             Transformamos dados em decisões inteligentes. Consultoria especializada em ERP,
             Business Intelligence, Engenharia de Dados e Transformação Digital.
           </p>
+
           <div className="flex gap-3">
             {[Linkedin, Instagram, Facebook, Youtube].map((Icon, i) => (
               <a
@@ -39,6 +37,7 @@ export function Footer() {
           </div>
         </div>
 
+        {/* SOLUÇÕES */}
         <div className="lg:col-span-2">
           <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-white/60 mb-4">
             Soluções
@@ -53,6 +52,7 @@ export function Footer() {
           </ul>
         </div>
 
+        {/* EMPRESA */}
         <div className="lg:col-span-2">
           <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-white/60 mb-4">
             Empresa
@@ -67,15 +67,27 @@ export function Footer() {
           </ul>
         </div>
 
+        {/* CONTATO */}
         <div className="lg:col-span-4">
           <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-white/60 mb-4">
             Contato
           </h4>
+
           <ul className="space-y-3 text-sm text-white/85">
-            <li className="flex gap-3"><MapPin className="h-4 w-4 mt-0.5 shrink-0 text-accent-orange" /> Av. Paulista, 1000 — São Paulo, SP</li>
-            <li className="flex gap-3"><Phone className="h-4 w-4 mt-0.5 shrink-0 text-accent-orange" /> +55 (11) 4000-0000</li>
-            <li className="flex gap-3"><Mail className="h-4 w-4 mt-0.5 shrink-0 text-accent-orange" /> contato@datalynk.com.br</li>
+            <li className="flex gap-3">
+              <MapPin className="h-4 w-4 mt-0.5 text-accent-orange" />
+              Av. Paulista, 1000 — São Paulo, SP
+            </li>
+            <li className="flex gap-3">
+              <Phone className="h-4 w-4 mt-0.5 text-accent-orange" />
+              +55 (11) 4000-0000
+            </li>
+            <li className="flex gap-3">
+              <Mail className="h-4 w-4 mt-0.5 text-accent-orange" />
+              contato@datalynk.com.br
+            </li>
           </ul>
+
           <form className="mt-6 flex gap-2">
             <input
               type="email"
@@ -88,9 +100,14 @@ export function Footer() {
           </form>
         </div>
       </div>
+
+      {/* COPYRIGHT */}
       <div className="border-t border-white/10">
         <div className="container-page py-6 flex flex-col md:flex-row justify-between gap-3 text-xs text-white/60">
-          <div>© {new Date().getFullYear()} DataLynk Consultoria em Tecnologia. Todos os direitos reservados.</div>
+          <div>
+            © {new Date().getFullYear()} DataLynk Consultoria em Tecnologia. Todos os direitos reservados.
+          </div>
+
           <div className="flex gap-5">
             <a href="#" className="hover:text-white">Política de Privacidade</a>
             <a href="#" className="hover:text-white">Termos de Uso</a>
