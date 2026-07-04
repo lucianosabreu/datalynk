@@ -54,10 +54,7 @@ export function Header() {
         />
       </Link>
 
-      {/* MENU DESKTOP */}
-      <nav className="hidden lg:flex items-center gap-1">
- 
-        <nav className="hidden lg:flex items-center gap-1">
+     <nav className="hidden lg:flex items-center gap-1">
           {nav.map((item) =>
             item.children ? (
               <div key={item.label} className="relative group">
