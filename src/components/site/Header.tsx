@@ -47,11 +47,8 @@ export function Header() {
   <img
     src="/logo.png"
     alt="DataLynk"
-    style={{
-      height: "60px",
-      width: "auto",
-      display: "block"
-    }}
+    width={220}
+    height={70}
   />
 </Link>
  
