@@ -6,10 +6,15 @@ export function Footer() {
     <footer className="gradient-brand text-white">
       <div className="container-page py-16 grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-4 space-y-5">
-          <div className="flex items-center gap-2.5">
-            <span className="grid h-11 w-11 place-items-center rounded-xl bg-white/10 backdrop-blur font-display font-bold text-xl">
-              D
-            </span>
+          <div className="flex items-center gap-3">
+  <Link to="/" className="flex items-center">
+    <img
+      src="/logo.png"
+      alt="DataLynk"
+      className="h-14 w-auto"
+    />
+  </Link>
+</div>
             <div>
               <div className="font-display font-bold text-xl">DataLynk</div>
               <div className="text-[10px] uppercase tracking-[0.2em] text-white/70">
