@@ -43,20 +43,11 @@ export function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="container-page flex h-20 items-center justify-between py-4">
-        <Link to="/" className="flex items-center gap-2.5 group">
-          <span className="grid h-10 w-10 place-items-center rounded-xl gradient-brand text-white font-display font-bold shadow-elegant">
-            D
-          </span>
-          <span className="flex flex-col leading-none">
-            <span className={`font-display font-bold text-lg ${scrolled ? "text-brand" : "text-white"}`}>
-              DataLynk
-            </span>
-            <span className={`text-[10px] tracking-[0.18em] uppercase ${scrolled ? "text-muted-foreground" : "text-white/70"}`}>
-              Consultoria em Tecnologia
-            </span>
-          </span>
-        </Link>
+     <img
+  src="/logo-datalynk.png"
+  alt="DataLynk"
+  className="h-14 w-auto"
+/>
 
         <nav className="hidden lg:flex items-center gap-1">
           {nav.map((item) =>
