@@ -43,7 +43,17 @@ export function Header() {
           : "bg-transparent"
       }`}
     >
-<Link to="/" className="flex items-center group">
+<Link to="/" className="flex items-center">
+  <img
+    src="/logo.png"
+    alt="DataLynk"
+    style={{
+      height: "60px",
+      width: "auto",
+      display: "block"
+    }}
+  />
+</Link>
   <img
     src="/logo.png"
     alt="DataLynk"
