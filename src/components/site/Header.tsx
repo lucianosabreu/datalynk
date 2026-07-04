@@ -44,7 +44,7 @@ export function Header() {
       }`}
     >
      <img
-  src="/logo-datalynk.png"
+  src="/logo.png"
   alt="DataLynk"
   className="h-14 w-auto"
 />
