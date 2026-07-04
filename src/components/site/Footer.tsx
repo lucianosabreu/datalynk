@@ -76,11 +76,11 @@ export function Footer() {
           <ul className="space-y-3 text-sm text-white/85">
             <li className="flex gap-3">
               <MapPin className="h-4 w-4 mt-0.5 text-accent-orange" />
-              Av. Paulista, 1000 — São Paulo, SP
+              Rua Paes Leme, 215 — Pinheiros, São Paulo, SP
             </li>
             <li className="flex gap-3">
               <Phone className="h-4 w-4 mt-0.5 text-accent-orange" />
-              +55 (11) 4000-0000
+              +55 (79) 9 8882-0278
             </li>
             <li className="flex gap-3">
               <Mail className="h-4 w-4 mt-0.5 text-accent-orange" />
