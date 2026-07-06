@@ -86,7 +86,7 @@ function SobrePage() {
           <Users2 className="h-10 w-10 mx-auto text-brand" />
           <h2 className="mt-4 font-display font-bold text-4xl text-brand">Nosso time</h2>
           <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
-            Mais de 120 especialistas certificados em TOTVS, dados, cloud e IA, distribuídos em
+            Especialistas em TOTVS, dados, cloud e IA, distribuídos em
             squads dedicadas por prática e cliente.
           </p>
         </div>
