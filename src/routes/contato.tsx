@@ -10,7 +10,7 @@ export const Route = createFileRoute("/contato")({
       { title: "Contato — Fale com um Especialista | DataLynk" },
       { name: "description", content: "Fale com um especialista DataLynk. Diagnóstico gratuito, WhatsApp, LinkedIn e Calendly." },
     ],
-    links: [{ rel: "canonical", href: "mailto:contato@datalynk.com.br" }],
+    links: [{ rel: "mailto:contato@datalynk.com.br", href: "mailto:contato@datalynk.com.br" }],
   }),
   component: ContatoPage,
 });
