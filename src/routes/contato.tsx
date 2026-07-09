@@ -8,7 +8,10 @@ export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
       { title: "Contato — Fale com um Especialista | DataLynk" },
-      { name: "description", content: "Fale com um especialista DataLynk. Diagnóstico gratuito, WhatsApp, LinkedIn e Calendly." },
+      {
+        name: "description",
+        content: "Fale com um especialista DataLynk. Diagnóstico gratuito, WhatsApp, LinkedIn e Calendly.",
+      },
     ],
     links: [{ rel: "mailto:contato@datalynk.com.br", href: "mailto:contato@datalynk.com.br" }],
   }),
@@ -22,7 +25,11 @@ function ContatoPage() {
     <SiteLayout>
       <PageHero
         eyebrow="Contato"
-        title={<>Vamos <span className="text-accent-orange">conversar</span></>}
+        title={
+          <>
+            Vamos <span className="text-accent-orange">conversar</span>
+          </>
+        }
         description="Preencha o formulário ou fale por qualquer canal. Nossos especialistas retornam em até 1 dia útil."
       />
       <section className="py-24 bg-white">
@@ -49,12 +56,22 @@ function ContatoPage() {
                 ].map((f) => (
                   <label key={f.n} className="flex flex-col text-sm">
                     <span className="font-medium text-ink mb-1.5">{f.l}</span>
-                    <input required type={f.t} name={f.n} className="rounded-xl border border-border bg-white px-4 py-3 focus:outline-none focus:border-brand" />
+                    <input
+                      required
+                      type={f.t}
+                      name={f.n}
+                      className="rounded-xl border border-border bg-white px-4 py-3 focus:outline-none focus:border-brand"
+                    />
                   </label>
                 ))}
                 <label className="md:col-span-2 flex flex-col text-sm">
                   <span className="font-medium text-ink mb-1.5">Como podemos ajudar?</span>
-                  <textarea required name="mensagem" rows={5} className="rounded-xl border border-border bg-white px-4 py-3 focus:outline-none focus:border-brand" />
+                  <textarea
+                    required
+                    name="mensagem"
+                    rows={5}
+                    className="rounded-xl border border-border bg-white px-4 py-3 focus:outline-none focus:border-brand"
+                  />
                 </label>
                 <button className="md:col-span-2 rounded-full bg-accent-orange text-white font-display font-semibold py-4 hover:brightness-110 transition">
                   Enviar solicitação
@@ -65,12 +82,12 @@ function ContatoPage() {
 
           <div className="lg:col-span-2 space-y-4">
             {[
-              { icon: MapPin, t: "Endereço", d: "Av. Paulista, 1000 — São Paulo, SP" },
-              { icon: Phone, t: "Telefone", d: "+55 (11) 4000-0000" },
+              { icon: MapPin, t: "Endereço", d: "Rua Paes Leme, 215 — Pinheiros, São Paulo, SP" },
+              { icon: Phone, t: "Telefone", d: "+55 (79) 9 8882-0278" },
               { icon: Mail, t: "E-mail", d: "contato@datalynk.com.br" },
-              { icon: MessageCircle, t: "WhatsApp", d: "+55 (11) 90000-0000" },
+              { icon: MessageCircle, t: "WhatsApp", d: "+55 (79) 9 8882-0278" },
               { icon: Calendar, t: "Calendly", d: "Agende uma reunião online" },
-              { icon: Linkedin, t: "LinkedIn", d: "/company/datalynk" },
+              { icon: Linkedin, t: "LinkedIn", d: "https://www.linkedin.com/in/luciano-abreu16/" },
             ].map((c) => (
               <div key={c.t} className="flex gap-4 items-start rounded-2xl bg-surface p-5 border border-border/60">
                 <div className="grid h-11 w-11 place-items-center rounded-xl bg-brand text-white shrink-0">
