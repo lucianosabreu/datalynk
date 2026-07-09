@@ -87,7 +87,7 @@ function ContatoPage() {
               { icon: Mail, t: "E-mail", d: "contato@datalynk.com.br" },
               { icon: MessageCircle, t: "WhatsApp", d: "+55 (79) 9 8882-0278" },
               { icon: Calendar, t: "Calendly", d: "Agende uma reunião online" },
-              { icon: Linkedin, t: "LinkedIn", d: "https://www.linkedin.com/in/luciano-abreu16/" },
+              { icon: Linkedin, t: "LinkedIn", d: "linkedin.com/in/luciano-abreu16/" },
             ].map((c) => (
               <div key={c.t} className="flex gap-4 items-start rounded-2xl bg-surface p-5 border border-border/60">
                 <div className="grid h-11 w-11 place-items-center rounded-xl bg-brand text-white shrink-0">
