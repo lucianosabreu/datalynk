@@ -24,6 +24,7 @@ import { Route as SolucoesSuporteRouteImport } from './routes/solucoes.suporte'
 import { Route as SolucoesEngenhariaDadosRouteImport } from './routes/solucoes.engenharia-dados'
 import { Route as SolucoesDesenvolvimentoRouteImport } from './routes/solucoes.desenvolvimento'
 import { Route as SolucoesBiRouteImport } from './routes/solucoes.bi'
+import { Route as ApiContactRouteImport } from './routes/api/contact'
 
 const SobreRoute = SobreRouteImport.update({
   id: '/sobre',
@@ -100,6 +101,11 @@ const SolucoesBiRoute = SolucoesBiRouteImport.update({
   path: '/solucoes/bi',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiContactRoute = ApiContactRouteImport.update({
+  id: '/api/contact',
+  path: '/api/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -110,6 +116,7 @@ export interface FileRoutesByFullPath {
   '/portal': typeof PortalRoute
   '/segmentos': typeof SegmentosRoute
   '/sobre': typeof SobreRoute
+  '/api/contact': typeof ApiContactRoute
   '/solucoes/bi': typeof SolucoesBiRoute
   '/solucoes/desenvolvimento': typeof SolucoesDesenvolvimentoRoute
   '/solucoes/engenharia-dados': typeof SolucoesEngenhariaDadosRoute
@@ -127,6 +134,7 @@ export interface FileRoutesByTo {
   '/portal': typeof PortalRoute
   '/segmentos': typeof SegmentosRoute
   '/sobre': typeof SobreRoute
+  '/api/contact': typeof ApiContactRoute
   '/solucoes/bi': typeof SolucoesBiRoute
   '/solucoes/desenvolvimento': typeof SolucoesDesenvolvimentoRoute
   '/solucoes/engenharia-dados': typeof SolucoesEngenhariaDadosRoute
@@ -145,6 +153,7 @@ export interface FileRoutesById {
   '/portal': typeof PortalRoute
   '/segmentos': typeof SegmentosRoute
   '/sobre': typeof SobreRoute
+  '/api/contact': typeof ApiContactRoute
   '/solucoes/bi': typeof SolucoesBiRoute
   '/solucoes/desenvolvimento': typeof SolucoesDesenvolvimentoRoute
   '/solucoes/engenharia-dados': typeof SolucoesEngenhariaDadosRoute
@@ -164,6 +173,7 @@ export interface FileRouteTypes {
     | '/portal'
     | '/segmentos'
     | '/sobre'
+    | '/api/contact'
     | '/solucoes/bi'
     | '/solucoes/desenvolvimento'
     | '/solucoes/engenharia-dados'
@@ -181,6 +191,7 @@ export interface FileRouteTypes {
     | '/portal'
     | '/segmentos'
     | '/sobre'
+    | '/api/contact'
     | '/solucoes/bi'
     | '/solucoes/desenvolvimento'
     | '/solucoes/engenharia-dados'
@@ -198,6 +209,7 @@ export interface FileRouteTypes {
     | '/portal'
     | '/segmentos'
     | '/sobre'
+    | '/api/contact'
     | '/solucoes/bi'
     | '/solucoes/desenvolvimento'
     | '/solucoes/engenharia-dados'
@@ -216,6 +228,7 @@ export interface RootRouteChildren {
   PortalRoute: typeof PortalRoute
   SegmentosRoute: typeof SegmentosRoute
   SobreRoute: typeof SobreRoute
+  ApiContactRoute: typeof ApiContactRoute
   SolucoesBiRoute: typeof SolucoesBiRoute
   SolucoesDesenvolvimentoRoute: typeof SolucoesDesenvolvimentoRoute
   SolucoesEngenhariaDadosRoute: typeof SolucoesEngenhariaDadosRoute
@@ -332,6 +345,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SolucoesBiRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/contact': {
+      id: '/api/contact'
+      path: '/api/contact'
+      fullPath: '/api/contact'
+      preLoaderRoute: typeof ApiContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -344,6 +364,7 @@ const rootRouteChildren: RootRouteChildren = {
   PortalRoute: PortalRoute,
   SegmentosRoute: SegmentosRoute,
   SobreRoute: SobreRoute,
+  ApiContactRoute: ApiContactRoute,
   SolucoesBiRoute: SolucoesBiRoute,
   SolucoesDesenvolvimentoRoute: SolucoesDesenvolvimentoRoute,
   SolucoesEngenhariaDadosRoute: SolucoesEngenhariaDadosRoute,
@@ -355,13 +376,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
