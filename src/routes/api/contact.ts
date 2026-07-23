@@ -128,7 +128,11 @@ ${mensagem}
             },
             body: JSON.stringify({
               from: "DataLynk Site <onboarding@resend.dev>",
-              to: ["contato@datalynk.com.br"],
+              // Domínio datalynk.com.br ainda não verificado no Resend.
+              // Enquanto isso, enviamos para o e-mail do dono da conta Resend.
+              // Após verificar o domínio em resend.com/domains, troque para ["contato@datalynk.com.br"]
+              // e ajuste "from" para um endereço @datalynk.com.br.
+              to: ["lucianosabreu@gmail.com"],
               reply_to: email,
               subject: `[Site] ${assunto} — ${nome} (${empresa})`,
               html,
