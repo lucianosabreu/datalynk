@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SegmentosRouteImport } from './routes/segmentos'
 import { Route as PortalRouteImport } from './routes/portal'
 import { Route as ContatoRouteImport } from './routes/contato'
@@ -29,6 +30,11 @@ import { Route as ApiContactRouteImport } from './routes/api/contact'
 const SobreRoute = SobreRouteImport.update({
   id: '/sobre',
   path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SegmentosRoute = SegmentosRouteImport.update({
@@ -115,6 +121,7 @@ export interface FileRoutesByFullPath {
   '/contato': typeof ContatoRoute
   '/portal': typeof PortalRoute
   '/segmentos': typeof SegmentosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
   '/api/contact': typeof ApiContactRoute
   '/solucoes/bi': typeof SolucoesBiRoute
@@ -133,6 +140,7 @@ export interface FileRoutesByTo {
   '/contato': typeof ContatoRoute
   '/portal': typeof PortalRoute
   '/segmentos': typeof SegmentosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
   '/api/contact': typeof ApiContactRoute
   '/solucoes/bi': typeof SolucoesBiRoute
@@ -152,6 +160,7 @@ export interface FileRoutesById {
   '/contato': typeof ContatoRoute
   '/portal': typeof PortalRoute
   '/segmentos': typeof SegmentosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
   '/api/contact': typeof ApiContactRoute
   '/solucoes/bi': typeof SolucoesBiRoute
@@ -172,6 +181,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/portal'
     | '/segmentos'
+    | '/sitemap.xml'
     | '/sobre'
     | '/api/contact'
     | '/solucoes/bi'
@@ -190,6 +200,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/portal'
     | '/segmentos'
+    | '/sitemap.xml'
     | '/sobre'
     | '/api/contact'
     | '/solucoes/bi'
@@ -208,6 +219,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/portal'
     | '/segmentos'
+    | '/sitemap.xml'
     | '/sobre'
     | '/api/contact'
     | '/solucoes/bi'
@@ -227,6 +239,7 @@ export interface RootRouteChildren {
   ContatoRoute: typeof ContatoRoute
   PortalRoute: typeof PortalRoute
   SegmentosRoute: typeof SegmentosRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SobreRoute: typeof SobreRoute
   ApiContactRoute: typeof ApiContactRoute
   SolucoesBiRoute: typeof SolucoesBiRoute
@@ -245,6 +258,13 @@ declare module '@tanstack/react-router' {
       path: '/sobre'
       fullPath: '/sobre'
       preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/segmentos': {
@@ -363,6 +383,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContatoRoute: ContatoRoute,
   PortalRoute: PortalRoute,
   SegmentosRoute: SegmentosRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   SobreRoute: SobreRoute,
   ApiContactRoute: ApiContactRoute,
   SolucoesBiRoute: SolucoesBiRoute,
@@ -376,13 +397,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
