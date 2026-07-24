@@ -9,8 +9,11 @@ export const Route = createFileRoute("/sobre")({
     meta: [
       { title: "Sobre a DataLynk — Consultoria em Tecnologia" },
       { name: "description", content: "Conheça a história, missão, visão, valores, equipe e parceiros da DataLynk Consultoria em Tecnologia." },
+      { property: "og:title", content: "Sobre a DataLynk — Consultoria em Tecnologia" },
+      { property: "og:description", content: "Conheça a história, missão, visão, valores, equipe e parceiros da DataLynk Consultoria em Tecnologia." },
+      { property: "og:url", content: "https://datalynk.com.br/sobre" },
     ],
-    links: [{ rel: "canonical", href: "/sobre" }],
+    links: [{ rel: "canonical", href: "https://datalynk.com.br/sobre" }],
   }),
   component: SobrePage,
 });

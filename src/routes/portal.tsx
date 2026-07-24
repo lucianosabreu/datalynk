@@ -8,8 +8,11 @@ export const Route = createFileRoute("/portal")({
     meta: [
       { title: "Portal do Cliente | DataLynk" },
       { name: "description", content: "Acesse o Portal do Cliente DataLynk: chamados, projetos, horas consumidas, dashboards e documentos." },
+      { property: "og:title", content: "Portal do Cliente | DataLynk" },
+      { property: "og:description", content: "Acesse o Portal do Cliente DataLynk: chamados, projetos, horas consumidas, dashboards e documentos." },
+      { property: "og:url", content: "https://datalynk.com.br/portal" },
     ],
-    links: [{ rel: "canonical", href: "/portal" }],
+    links: [{ rel: "canonical", href: "https://datalynk.com.br/portal" }],
   }),
   component: PortalPage,
 });

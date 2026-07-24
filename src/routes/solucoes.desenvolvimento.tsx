@@ -7,8 +7,11 @@ export const Route = createFileRoute("/solucoes/desenvolvimento")({
     meta: [
       { title: "Desenvolvimento de Sistemas, Apps e APIs | DataLynk" },
       { name: "description", content: "Sistemas Web, Aplicativos, APIs, Integrações, IA e Automação sob medida para transformação digital." },
+      { property: "og:title", content: "Desenvolvimento de Sistemas, Apps e APIs | DataLynk" },
+      { property: "og:description", content: "Sistemas Web, Aplicativos, APIs, Integrações, IA e Automação sob medida para transformação digital." },
+      { property: "og:url", content: "https://datalynk.com.br/solucoes/desenvolvimento" },
     ],
-    links: [{ rel: "canonical", href: "/solucoes/desenvolvimento" }],
+    links: [{ rel: "canonical", href: "https://datalynk.com.br/solucoes/desenvolvimento" }],
   }),
   component: () => (
     <SolutionDetail

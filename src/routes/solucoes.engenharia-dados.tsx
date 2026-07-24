@@ -7,8 +7,11 @@ export const Route = createFileRoute("/solucoes/engenharia-dados")({
     meta: [
       { title: "Engenharia de Dados — Data Lake, DW, ETL | DataLynk" },
       { name: "description", content: "Data Lake, Data Warehouse, ETL, governança e integrações. Arquitetura moderna de dados para grandes volumes e Big Data." },
+      { property: "og:title", content: "Engenharia de Dados — Data Lake, DW, ETL | DataLynk" },
+      { property: "og:description", content: "Data Lake, Data Warehouse, ETL, governança e integrações. Arquitetura moderna de dados para grandes volumes e Big Data." },
+      { property: "og:url", content: "https://datalynk.com.br/solucoes/engenharia-dados" },
     ],
-    links: [{ rel: "canonical", href: "/solucoes/engenharia-dados" }],
+    links: [{ rel: "canonical", href: "https://datalynk.com.br/solucoes/engenharia-dados" }],
   }),
   component: () => (
     <SolutionDetail

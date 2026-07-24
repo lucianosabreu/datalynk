@@ -7,8 +7,11 @@ export const Route = createFileRoute("/solucoes/suporte")({
     meta: [
       { title: "Suporte em Tecnologia, Cloud e Service Desk | DataLynk" },
       { name: "description", content: "Infraestrutura, Cloud, Service Desk e monitoramento 24/7 para manter sua operação sempre no ar." },
+      { property: "og:title", content: "Suporte em Tecnologia, Cloud e Service Desk | DataLynk" },
+      { property: "og:description", content: "Infraestrutura, Cloud, Service Desk e monitoramento 24/7 para manter sua operação sempre no ar." },
+      { property: "og:url", content: "https://datalynk.com.br/solucoes/suporte" },
     ],
-    links: [{ rel: "canonical", href: "/solucoes/suporte" }],
+    links: [{ rel: "canonical", href: "https://datalynk.com.br/solucoes/suporte" }],
   }),
   component: () => (
     <SolutionDetail
