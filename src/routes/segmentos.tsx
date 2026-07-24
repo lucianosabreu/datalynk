@@ -7,9 +7,12 @@ export const Route = createFileRoute("/segmentos")({
   head: () => ({
     meta: [
       { title: "Segmentos que atendemos | DataLynk" },
-      { name: "description", content: "Educação, Saúde, Indústria, Varejo, Serviços e Agronegócio — experiência real em setores estratégicos." },
+      { name: "description", content: "Educação, Saúde, Indústria, Varejo, Serviços e Agronegócio — experiência real em setores estratégicos com times especialistas." },
+      { property: "og:title", content: "Segmentos que atendemos | DataLynk" },
+      { property: "og:description", content: "Educação, Saúde, Indústria, Varejo, Serviços e Agronegócio — experiência real em setores estratégicos com times especialistas." },
+      { property: "og:url", content: "https://datalynk.com.br/segmentos" },
     ],
-    links: [{ rel: "canonical", href: "/segmentos" }],
+    links: [{ rel: "canonical", href: "https://datalynk.com.br/segmentos" }],
   }),
   component: SegmentosPage,
 });
@@ -38,7 +41,7 @@ function SegmentosPage() {
               <div className="grid h-14 w-14 place-items-center rounded-2xl gradient-brand text-white">
                 <s.icon className="h-7 w-7" />
               </div>
-              <h3 className="mt-6 font-display font-bold text-xl text-brand">{s.title}</h3>
+              <h2 className="mt-6 font-display font-bold text-xl text-brand">{s.title}</h2>
               <p className="mt-2 text-muted-foreground text-sm">{s.desc}</p>
             </div>
           ))}

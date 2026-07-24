@@ -7,9 +7,12 @@ export const Route = createFileRoute("/solucoes/")({
   head: () => ({
     meta: [
       { title: "Soluções — Consultoria em Tecnologia | DataLynk" },
-      { name: "description", content: "TOTVS RM, Protheus, BI, Engenharia de Dados, Desenvolvimento e Suporte em Tecnologia." },
+      { name: "description", content: "Portfólio DataLynk: TOTVS RM, Protheus, BI, Engenharia de Dados, Desenvolvimento e Suporte em Tecnologia para transformação digital." },
+      { property: "og:title", content: "Soluções — Consultoria em Tecnologia | DataLynk" },
+      { property: "og:description", content: "Portfólio DataLynk: TOTVS RM, Protheus, BI, Engenharia de Dados, Desenvolvimento e Suporte em Tecnologia para transformação digital." },
+      { property: "og:url", content: "https://datalynk.com.br/solucoes" },
     ],
-    links: [{ rel: "canonical", href: "/solucoes" }],
+    links: [{ rel: "canonical", href: "https://datalynk.com.br/solucoes" }],
   }),
   component: SolucoesPage,
 });
@@ -38,7 +41,7 @@ function SolucoesPage() {
               <div className="grid h-14 w-14 place-items-center rounded-2xl bg-brand/5 text-brand group-hover:bg-brand group-hover:text-white transition">
                 <s.icon className="h-6 w-6" />
               </div>
-              <h3 className="mt-6 font-display font-bold text-xl text-brand">{s.title}</h3>
+              <h2 className="mt-6 font-display font-bold text-xl text-brand">{s.title}</h2>
               <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
               <div className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-brand group-hover:text-accent-orange">
                 Explorar <ArrowRight className="h-4 w-4" />

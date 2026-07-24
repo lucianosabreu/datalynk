@@ -7,9 +7,12 @@ export const Route = createFileRoute("/cases")({
   head: () => ({
     meta: [
       { title: "Cases de Sucesso | DataLynk" },
-      { name: "description", content: "Cases reais de clientes DataLynk em TOTVS, BI, Dados e Transformação Digital." },
+      { name: "description", content: "Cases reais de clientes DataLynk em TOTVS, BI, Dados e Transformação Digital com resultados mensuráveis." },
+      { property: "og:title", content: "Cases de Sucesso | DataLynk" },
+      { property: "og:description", content: "Cases reais de clientes DataLynk em TOTVS, BI, Dados e Transformação Digital com resultados mensuráveis." },
+      { property: "og:url", content: "https://datalynk.com.br/cases" },
     ],
-    links: [{ rel: "canonical", href: "/cases" }],
+    links: [{ rel: "canonical", href: "https://datalynk.com.br/cases" }],
   }),
   component: CasesPage,
 });
@@ -34,7 +37,7 @@ function CasesPage() {
           {cases.map((c) => (
             <article key={c.title} className="rounded-3xl bg-white p-8 border border-border/60 shadow-elegant">
               <div className="text-xs uppercase tracking-widest text-accent-orange font-semibold">{c.tag}</div>
-              <h3 className="mt-3 font-display font-bold text-2xl text-brand leading-tight">{c.title}</h3>
+              <h2 className="mt-3 font-display font-bold text-2xl text-brand leading-tight">{c.title}</h2>
               <div className="mt-6 grid gap-4 sm:grid-cols-3">
                 {[
                   { k: "Problema", v: c.problem },
