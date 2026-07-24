@@ -12,9 +12,17 @@ export const Route = createFileRoute("/contato")({
       {
         name: "description",
         content:
-          "Fale com um especialista DataLynk. Diagnóstico gratuito, WhatsApp, LinkedIn e Calendly.",
+          "Fale com um especialista DataLynk. Diagnóstico gratuito, WhatsApp, LinkedIn e Calendly para acelerar seu projeto de tecnologia.",
       },
+      { property: "og:title", content: "Contato — Fale com um Especialista | DataLynk" },
+      {
+        property: "og:description",
+        content:
+          "Fale com um especialista DataLynk. Diagnóstico gratuito, WhatsApp, LinkedIn e Calendly para acelerar seu projeto de tecnologia.",
+      },
+      { property: "og:url", content: "https://datalynk.com.br/contato" },
     ],
+    links: [{ rel: "canonical", href: "https://datalynk.com.br/contato" }],
   }),
   component: ContatoPage,
 });

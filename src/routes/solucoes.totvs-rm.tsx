@@ -7,8 +7,11 @@ export const Route = createFileRoute("/solucoes/totvs-rm")({
     meta: [
       { title: "Consultoria TOTVS RM — Implantação e Sustentação | DataLynk" },
       { name: "description", content: "Consultoria especializada em TOTVS RM: implantação, suporte, integrações e evolução dos módulos Educacional, RH, Backoffice, Financeiro e Portais." },
+      { property: "og:title", content: "Consultoria TOTVS RM — Implantação e Sustentação | DataLynk" },
+      { property: "og:description", content: "Consultoria especializada em TOTVS RM: implantação, suporte, integrações e evolução dos módulos Educacional, RH, Backoffice, Financeiro e Portais." },
+      { property: "og:url", content: "https://datalynk.com.br/solucoes/totvs-rm" },
     ],
-    links: [{ rel: "canonical", href: "/solucoes/totvs-rm" }],
+    links: [{ rel: "canonical", href: "https://datalynk.com.br/solucoes/totvs-rm" }],
   }),
   component: () => (
     <SolutionDetail

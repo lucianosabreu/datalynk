@@ -8,8 +8,11 @@ export const Route = createFileRoute("/carreiras")({
     meta: [
       { title: "Carreiras — Trabalhe na DataLynk" },
       { name: "description", content: "Faça parte de uma equipe de especialistas em ERP, dados, cloud e IA. Vagas abertas na DataLynk." },
+      { property: "og:title", content: "Carreiras — Trabalhe na DataLynk" },
+      { property: "og:description", content: "Faça parte de uma equipe de especialistas em ERP, dados, cloud e IA. Vagas abertas na DataLynk." },
+      { property: "og:url", content: "https://datalynk.com.br/carreiras" },
     ],
-    links: [{ rel: "canonical", href: "/carreiras" }],
+    links: [{ rel: "canonical", href: "https://datalynk.com.br/carreiras" }],
   }),
   component: CarreirasPage,
 });

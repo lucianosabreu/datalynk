@@ -7,8 +7,11 @@ export const Route = createFileRoute("/solucoes/totvs-protheus")({
     meta: [
       { title: "Consultoria TOTVS Protheus — Implantação e Customização | DataLynk" },
       { name: "description", content: "Implantação, customização, integração, sustentação e melhorias no TOTVS Protheus com especialistas certificados." },
+      { property: "og:title", content: "Consultoria TOTVS Protheus — Implantação e Customização | DataLynk" },
+      { property: "og:description", content: "Implantação, customização, integração, sustentação e melhorias no TOTVS Protheus com especialistas certificados." },
+      { property: "og:url", content: "https://datalynk.com.br/solucoes/totvs-protheus" },
     ],
-    links: [{ rel: "canonical", href: "/solucoes/totvs-protheus" }],
+    links: [{ rel: "canonical", href: "https://datalynk.com.br/solucoes/totvs-protheus" }],
   }),
   component: () => (
     <SolutionDetail

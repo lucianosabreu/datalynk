@@ -1,0 +1,22 @@
+# DataLynk
+
+> Consultoria em tecnologia especializada em TOTVS (RM e Protheus), Business Intelligence, Engenharia de Dados, Inteligência Artificial e Transformação Digital para grandes empresas.
+
+A DataLynk transforma dados em decisões inteligentes, unindo profundidade técnica em ERP, dados e IA a uma cultura consultiva focada em resultados de negócio mensuráveis.
+
+## Pages
+
+- [Home](/): Visão geral da consultoria, soluções, segmentos e cases.
+- [Sobre](/sobre): Quem somos, propósito, valores e diferenciais.
+- [Soluções](/solucoes): Portfólio completo de serviços em tecnologia.
+- [TOTVS RM](/solucoes/totvs-rm): Implantação e sustentação do TOTVS RM em Educação, RH e Backoffice.
+- [TOTVS Protheus](/solucoes/totvs-protheus): Implantação, customização e integração do Protheus.
+- [Business Intelligence](/solucoes/bi): Power BI, dashboards, analytics e KPIs.
+- [Engenharia de Dados](/solucoes/engenharia-dados): Data Lake, Data Warehouse, ETL e governança.
+- [Desenvolvimento](/solucoes/desenvolvimento): Web, apps, APIs, IA e automação sob medida.
+- [Suporte em Tecnologia](/solucoes/suporte): Infraestrutura, Cloud, Service Desk e monitoramento.
+- [Segmentos](/segmentos): Setores atendidos (Educação, Saúde, Indústria, Varejo, Serviços, Agronegócio).
+- [Cases](/cases): Cases reais de clientes com resultados mensuráveis.
+- [Blog](/blog): Conteúdo técnico e estratégico sobre TOTVS, BI, Dados, IA e Cloud.
+- [Carreiras](/carreiras): Oportunidades para trabalhar na DataLynk.
+- [Contato](/contato): Fale com um especialista e solicite um diagnóstico gratuito.

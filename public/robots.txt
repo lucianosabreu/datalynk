@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://datalynk.com.br/sitemap.xml

@@ -7,8 +7,11 @@ export const Route = createFileRoute("/solucoes/bi")({
     meta: [
       { title: "Business Intelligence e Power BI | DataLynk" },
       { name: "description", content: "Consultoria em Business Intelligence: Power BI, dashboards, analytics, KPIs e Machine Learning aplicados ao negócio." },
+      { property: "og:title", content: "Business Intelligence e Power BI | DataLynk" },
+      { property: "og:description", content: "Consultoria em Business Intelligence: Power BI, dashboards, analytics, KPIs e Machine Learning aplicados ao negócio." },
+      { property: "og:url", content: "https://datalynk.com.br/solucoes/bi" },
     ],
-    links: [{ rel: "canonical", href: "/solucoes/bi" }],
+    links: [{ rel: "canonical", href: "https://datalynk.com.br/solucoes/bi" }],
   }),
   component: () => (
     <SolutionDetail

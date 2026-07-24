@@ -7,9 +7,12 @@ export const Route = createFileRoute("/blog")({
   head: () => ({
     meta: [
       { title: "Blog DataLynk — ERP, TOTVS, BI, Dados, IA e Cloud" },
-      { name: "description", content: "Conteúdo técnico e estratégico sobre TOTVS, Power BI, Engenharia de Dados, IA e Cloud." },
+      { name: "description", content: "Conteúdo técnico e estratégico sobre TOTVS, Power BI, Engenharia de Dados, IA e Cloud para líderes de tecnologia." },
+      { property: "og:title", content: "Blog DataLynk — ERP, TOTVS, BI, Dados, IA e Cloud" },
+      { property: "og:description", content: "Conteúdo técnico e estratégico sobre TOTVS, Power BI, Engenharia de Dados, IA e Cloud para líderes de tecnologia." },
+      { property: "og:url", content: "https://datalynk.com.br/blog" },
     ],
-    links: [{ rel: "canonical", href: "/blog" }],
+    links: [{ rel: "canonical", href: "https://datalynk.com.br/blog" }],
   }),
   component: BlogPage,
 });
@@ -42,7 +45,7 @@ function BlogPage() {
                 <span className="inline-flex items-center gap-1"><Tag className="h-3 w-3" /> {p.cat}</span>
                 <span className="inline-flex items-center gap-1"><Calendar className="h-3 w-3" /> {p.date}</span>
               </div>
-              <h3 className="mt-3 font-display font-semibold text-brand leading-tight">{p.title}</h3>
+              <h2 className="mt-3 font-display font-semibold text-brand leading-tight">{p.title}</h2>
               <p className="mt-2 text-sm text-muted-foreground">{p.excerpt}</p>
             </article>
           ))}

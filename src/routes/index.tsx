@@ -32,10 +32,24 @@ import networkImg from "@/assets/pattern-network.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "DataLynk — Consultoria em Tecnologia, TOTVS, BI e Dados" },
-      { name: "description", content: "Transformamos dados em decisões inteligentes. Consultoria em TOTVS RM, Protheus, Power BI, Engenharia de Dados, IA e Transformação Digital." },
+      { title: "DataLynk — Dados, TOTVS e IA para grandes empresas" },
+      { name: "description", content: "Consultoria em TOTVS RM, Protheus, Power BI, Engenharia de Dados e IA. Diagnóstico gratuito com especialistas para acelerar sua transformação digital." },
+      { property: "og:title", content: "DataLynk — Dados, TOTVS e IA para grandes empresas" },
+      { property: "og:description", content: "Consultoria em TOTVS RM, Protheus, Power BI, Engenharia de Dados e IA. Diagnóstico gratuito com especialistas para acelerar sua transformação digital." },
+      { property: "og:url", content: "https://datalynk.com.br/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://datalynk.com.br/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "DataLynk",
+          url: "https://datalynk.com.br",
+        }),
+      },
+    ],
   }),
   component: HomePage,
 });
@@ -91,7 +105,7 @@ function HomePage() {
       {/* HERO */}
       <section className="relative min-h-[92vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="" className="h-full w-full object-cover" width={1920} height={1080} />
+          <img src={heroImg} alt="" className="h-full w-full object-cover" width={1920} height={1080} fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-br from-[#0a2547]/95 via-[#123B66]/85 to-[#123B66]/70" />
           <div className="absolute inset-0 bg-gradient-to-t from-brand/60 via-transparent to-transparent" />
         </div>

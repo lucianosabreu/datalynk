@@ -78,18 +78,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "DataLynk — Consultoria em Tecnologia, TOTVS, BI e Dados" },
-      { name: "description", content: "Transformamos dados em decisões inteligentes. Consultoria em TOTVS RM, Protheus, Power BI, Engenharia de Dados, IA e Transformação Digital." },
-      { name: "author", content: "DataLynk" },
-      { property: "og:title", content: "DataLynk — Consultoria em Tecnologia, TOTVS, BI e Dados" },
-      { property: "og:description", content: "Transformamos dados em decisões inteligentes. Consultoria em TOTVS RM, Protheus, Power BI, Engenharia de Dados, IA e Transformação Digital." },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "DataLynk" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "DataLynk — Consultoria em Tecnologia, TOTVS, BI e Dados" },
-      { name: "twitter:description", content: "Transformamos dados em decisões inteligentes. Consultoria em TOTVS RM, Protheus, Power BI, Engenharia de Dados, IA e Transformação Digital." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1d792199-1215-4a55-b2e2-c42bb5abfd9b/id-preview-befbc7be--8b5c6862-5491-4f55-8b21-bdbd83cdf2b1.lovable.app-1783106889314.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1d792199-1215-4a55-b2e2-c42bb5abfd9b/id-preview-befbc7be--8b5c6862-5491-4f55-8b21-bdbd83cdf2b1.lovable.app-1783106889314.png" },
+      { name: "author", content: "DataLynk" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -97,6 +89,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "DataLynk",
+          url: "https://datalynk.com.br",
+          logo: "https://datalynk.com.br/logo.png",
+          description:
+            "Consultoria em tecnologia especializada em TOTVS, Business Intelligence, Engenharia de Dados e IA.",
+          sameAs: ["https://www.linkedin.com/in/luciano-abreu16/"],
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
