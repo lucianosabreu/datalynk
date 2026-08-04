@@ -187,6 +187,9 @@ function HomePage() {
         </div>
       </section>
 
+      <ClientsCarousel />
+
+
       {/* Solutions */}
       <section className="py-24 bg-surface">
         <div className="container-page">
