@@ -24,6 +24,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
+import { ClientsCarousel } from "@/components/site/ClientsCarousel";
 import heroImg from "@/assets/hero-datalynk.jpg";
 import dashImg from "@/assets/dashboard-bi.jpg";
 import teamImg from "@/assets/team-collab.jpg";
