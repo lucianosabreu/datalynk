@@ -1,8 +1,10 @@
 import type { ComponentType } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import type { LinkProps } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHero } from "@/components/site/PageHero";
+import { Breadcrumbs, type Crumb } from "@/components/site/Breadcrumbs";
 
 export interface SolutionSection {
   title: string;
@@ -18,6 +20,9 @@ export interface SolutionDetailProps {
   sections: SolutionSection[];
   process?: { step: string; title: string; desc: string }[];
   faqs?: { q: string; a: string }[];
+  breadcrumbs?: Crumb[];
+  related?: { title: string; desc: string; to: LinkProps["to"] }[];
+  service?: { name: string; description: string; url: string; serviceType?: string };
 }
 
 export function SolutionDetail({
@@ -29,6 +34,9 @@ export function SolutionDetail({
   sections,
   process,
   faqs,
+  breadcrumbs,
+  related,
+  service,
 }: SolutionDetailProps) {
   return (
     <SiteLayout>
@@ -46,6 +54,14 @@ export function SolutionDetail({
           </Link>
         </div>
       </PageHero>
+
+      {breadcrumbs && (
+        <div className="bg-white border-b border-border/60">
+          <div className="container-page py-4">
+            <Breadcrumbs items={breadcrumbs} />
+          </div>
+        </div>
+      )}
 
       <section className="py-20 bg-white">
         <div className="container-page grid lg:grid-cols-3 gap-12">
@@ -136,6 +152,47 @@ export function SolutionDetail({
             />
           </div>
         </section>
+      )}
+
+      {related && related.length > 0 && (
+        <section className="py-20 bg-surface">
+          <div className="container-page">
+            <h2 className="font-display font-bold text-3xl text-brand leading-tight">Conteúdos e serviços relacionados</h2>
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {related.map((r) => (
+                <Link
+                  key={r.title}
+                  to={r.to}
+                  className="group rounded-2xl bg-white p-6 border border-border/60 shadow-elegant hover:-translate-y-1 transition"
+                >
+                  <div className="font-display font-semibold text-brand">{r.title}</div>
+                  <div className="mt-1 text-sm text-muted-foreground">{r.desc}</div>
+                  <div className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-accent-orange">
+                    Saber mais <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition" />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {service && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              name: service.name,
+              description: service.description,
+              url: service.url,
+              ...(service.serviceType ? { serviceType: service.serviceType } : {}),
+              provider: { "@type": "Organization", name: "DataLynk", url: "https://datalynk.com.br" },
+              areaServed: { "@type": "Country", name: "Brasil" },
+            }),
+          }}
+        />
       )}
 
       <section className="py-16 bg-surface">
