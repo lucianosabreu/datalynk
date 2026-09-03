@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TotvsRouteImport } from './routes/totvs'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SegmentosRouteImport } from './routes/segmentos'
@@ -27,6 +28,11 @@ import { Route as SolucoesDesenvolvimentoRouteImport } from './routes/solucoes.d
 import { Route as SolucoesBiRouteImport } from './routes/solucoes.bi'
 import { Route as ApiContactRouteImport } from './routes/api/contact'
 
+const TotvsRoute = TotvsRouteImport.update({
+  id: '/totvs',
+  path: '/totvs',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SobreRoute = SobreRouteImport.update({
   id: '/sobre',
   path: '/sobre',
@@ -123,6 +129,7 @@ export interface FileRoutesByFullPath {
   '/segmentos': typeof SegmentosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
+  '/totvs': typeof TotvsRoute
   '/api/contact': typeof ApiContactRoute
   '/solucoes/bi': typeof SolucoesBiRoute
   '/solucoes/desenvolvimento': typeof SolucoesDesenvolvimentoRoute
@@ -142,6 +149,7 @@ export interface FileRoutesByTo {
   '/segmentos': typeof SegmentosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
+  '/totvs': typeof TotvsRoute
   '/api/contact': typeof ApiContactRoute
   '/solucoes/bi': typeof SolucoesBiRoute
   '/solucoes/desenvolvimento': typeof SolucoesDesenvolvimentoRoute
@@ -162,6 +170,7 @@ export interface FileRoutesById {
   '/segmentos': typeof SegmentosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
+  '/totvs': typeof TotvsRoute
   '/api/contact': typeof ApiContactRoute
   '/solucoes/bi': typeof SolucoesBiRoute
   '/solucoes/desenvolvimento': typeof SolucoesDesenvolvimentoRoute
@@ -183,6 +192,7 @@ export interface FileRouteTypes {
     | '/segmentos'
     | '/sitemap.xml'
     | '/sobre'
+    | '/totvs'
     | '/api/contact'
     | '/solucoes/bi'
     | '/solucoes/desenvolvimento'
@@ -202,6 +212,7 @@ export interface FileRouteTypes {
     | '/segmentos'
     | '/sitemap.xml'
     | '/sobre'
+    | '/totvs'
     | '/api/contact'
     | '/solucoes/bi'
     | '/solucoes/desenvolvimento'
@@ -221,6 +232,7 @@ export interface FileRouteTypes {
     | '/segmentos'
     | '/sitemap.xml'
     | '/sobre'
+    | '/totvs'
     | '/api/contact'
     | '/solucoes/bi'
     | '/solucoes/desenvolvimento'
@@ -241,6 +253,7 @@ export interface RootRouteChildren {
   SegmentosRoute: typeof SegmentosRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SobreRoute: typeof SobreRoute
+  TotvsRoute: typeof TotvsRoute
   ApiContactRoute: typeof ApiContactRoute
   SolucoesBiRoute: typeof SolucoesBiRoute
   SolucoesDesenvolvimentoRoute: typeof SolucoesDesenvolvimentoRoute
@@ -253,6 +266,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/totvs': {
+      id: '/totvs'
+      path: '/totvs'
+      fullPath: '/totvs'
+      preLoaderRoute: typeof TotvsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sobre': {
       id: '/sobre'
       path: '/sobre'
@@ -385,6 +405,7 @@ const rootRouteChildren: RootRouteChildren = {
   SegmentosRoute: SegmentosRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SobreRoute: SobreRoute,
+  TotvsRoute: TotvsRoute,
   ApiContactRoute: ApiContactRoute,
   SolucoesBiRoute: SolucoesBiRoute,
   SolucoesDesenvolvimentoRoute: SolucoesDesenvolvimentoRoute,
