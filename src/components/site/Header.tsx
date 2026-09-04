@@ -1,8 +1,15 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import type { LinkProps } from "@tanstack/react-router";
 
-const nav = [
+type NavItem = {
+  label: string;
+  to: LinkProps["to"];
+  children?: { label: string; to: LinkProps["to"] }[];
+};
+
+const nav: NavItem[] = [
   { label: "Sobre", to: "/sobre" },
   {
     label: "TOTVS",
@@ -32,7 +39,7 @@ const nav = [
   { label: "Blog", to: "/blog" },
   { label: "Carreiras", to: "/carreiras" },
   { label: "Contato", to: "/contato" },
-] as const;
+];
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
