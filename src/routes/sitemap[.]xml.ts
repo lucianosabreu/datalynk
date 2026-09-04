@@ -9,16 +9,24 @@ interface SitemapEntry {
   priority?: string;
 }
 
+// Somente URLs públicas, canônicas e indexáveis.
+// /solucoes/totvs-rm e /solucoes/totvs-protheus ficam fora: redirecionam (301) para /totvs-rm e /totvs-protheus.
 const entries: SitemapEntry[] = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
-  { path: "/sobre", changefreq: "monthly", priority: "0.8" },
+  { path: "/totvs", changefreq: "weekly", priority: "0.95" },
+  { path: "/totvs-rm", changefreq: "weekly", priority: "0.95" },
+  { path: "/totvs-protheus", changefreq: "monthly", priority: "0.9" },
+  { path: "/totvs-fluig", changefreq: "monthly", priority: "0.85" },
+  { path: "/consultoria-totvs", changefreq: "monthly", priority: "0.9" },
+  { path: "/consultoria-totvs-rm", changefreq: "monthly", priority: "0.9" },
+  { path: "/implantacao-totvs-rm", changefreq: "monthly", priority: "0.85" },
+  { path: "/suporte-totvs-rm", changefreq: "monthly", priority: "0.85" },
   { path: "/solucoes", changefreq: "monthly", priority: "0.9" },
-  { path: "/solucoes/totvs-rm", changefreq: "monthly", priority: "0.8" },
-  { path: "/solucoes/totvs-protheus", changefreq: "monthly", priority: "0.8" },
   { path: "/solucoes/bi", changefreq: "monthly", priority: "0.8" },
   { path: "/solucoes/engenharia-dados", changefreq: "monthly", priority: "0.8" },
   { path: "/solucoes/desenvolvimento", changefreq: "monthly", priority: "0.8" },
   { path: "/solucoes/suporte", changefreq: "monthly", priority: "0.8" },
+  { path: "/sobre", changefreq: "monthly", priority: "0.8" },
   { path: "/segmentos", changefreq: "monthly", priority: "0.7" },
   { path: "/cases", changefreq: "monthly", priority: "0.7" },
   { path: "/blog", changefreq: "weekly", priority: "0.7" },

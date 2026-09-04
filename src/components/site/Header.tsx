@@ -1,15 +1,33 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import type { LinkProps } from "@tanstack/react-router";
 
-const nav = [
+type NavItem = {
+  label: string;
+  to: LinkProps["to"];
+  children?: { label: string; to: LinkProps["to"] }[];
+};
+
+const nav: NavItem[] = [
   { label: "Sobre", to: "/sobre" },
+  {
+    label: "TOTVS",
+    to: "/totvs",
+    children: [
+      { label: "Ecossistema TOTVS", to: "/totvs" },
+      { label: "TOTVS RM", to: "/totvs-rm" },
+      { label: "TOTVS Protheus", to: "/totvs-protheus" },
+      { label: "TOTVS Fluig", to: "/totvs-fluig" },
+      { label: "Consultoria TOTVS", to: "/consultoria-totvs" },
+      { label: "Implantação TOTVS RM", to: "/implantacao-totvs-rm" },
+      { label: "Suporte TOTVS RM", to: "/suporte-totvs-rm" },
+    ],
+  },
   {
     label: "Soluções",
     to: "/solucoes",
     children: [
-      { label: "TOTVS RM", to: "/solucoes/totvs-rm" },
-      { label: "TOTVS Protheus", to: "/solucoes/totvs-protheus" },
       { label: "Business Intelligence", to: "/solucoes/bi" },
       { label: "Engenharia de Dados", to: "/solucoes/engenharia-dados" },
       { label: "Desenvolvimento", to: "/solucoes/desenvolvimento" },
@@ -26,7 +44,7 @@ const nav = [
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [subOpen, setSubOpen] = useState(false);
+  const [subOpen, setSubOpen] = useState<string | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -126,13 +144,13 @@ export function Header() {
               item.children ? (
                 <div key={item.label}>
                   <button
-                    onClick={() => setSubOpen((v) => !v)}
+                    onClick={() => setSubOpen((v) => (v === item.label ? null : item.label))}
                     className="w-full flex items-center justify-between py-3 text-ink font-medium"
                   >
                     {item.label}
-                    <ChevronDown className={`h-4 w-4 transition ${subOpen ? "rotate-180" : ""}`} />
+                    <ChevronDown className={`h-4 w-4 transition ${subOpen === item.label ? "rotate-180" : ""}`} />
                   </button>
-                  {subOpen && (
+                  {subOpen === item.label && (
                     <div className="pl-4 flex flex-col gap-1 pb-2">
                       {item.children.map((c) => (
                         <Link

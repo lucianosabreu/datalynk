@@ -1,22 +1,37 @@
-# DataLynk
+# DataLynk Consultoria em Tecnologia
 
-> Consultoria em tecnologia especializada em TOTVS (RM e Protheus), Business Intelligence, Engenharia de Dados, Inteligência Artificial e Transformação Digital para grandes empresas.
+> Consultoria brasileira especializada no ecossistema TOTVS (RM, Protheus e Fluig), Business Intelligence, Engenharia de Dados, Desenvolvimento e Inteligência Artificial.
 
-A DataLynk transforma dados em decisões inteligentes, unindo profundidade técnica em ERP, dados e IA a uma cultura consultiva focada em resultados de negócio mensuráveis.
+Site: https://datalynk.com.br
+Contato: contato@datalynk.com.br | +55 (79) 9 8882-0278
 
-## Pages
+## O que a DataLynk faz
+- Consultoria, implantação, integração e sustentação de ERP TOTVS.
+- Camada analítica sobre o ERP: engenharia de dados, modelos e dashboards em Power BI.
+- Desenvolvimento sob medida, integrações e aplicações com inteligência artificial.
+- Suporte em tecnologia e infraestrutura.
 
-- [Home](/): Visão geral da consultoria, soluções, segmentos e cases.
-- [Sobre](/sobre): Quem somos, propósito, valores e diferenciais.
-- [Soluções](/solucoes): Portfólio completo de serviços em tecnologia.
-- [TOTVS RM](/solucoes/totvs-rm): Implantação e sustentação do TOTVS RM em Educação, RH e Backoffice.
-- [TOTVS Protheus](/solucoes/totvs-protheus): Implantação, customização e integração do Protheus.
-- [Business Intelligence](/solucoes/bi): Power BI, dashboards, analytics e KPIs.
-- [Engenharia de Dados](/solucoes/engenharia-dados): Data Lake, Data Warehouse, ETL e governança.
-- [Desenvolvimento](/solucoes/desenvolvimento): Web, apps, APIs, IA e automação sob medida.
-- [Suporte em Tecnologia](/solucoes/suporte): Infraestrutura, Cloud, Service Desk e monitoramento.
-- [Segmentos](/segmentos): Setores atendidos (Educação, Saúde, Indústria, Varejo, Serviços, Agronegócio).
-- [Cases](/cases): Cases reais de clientes com resultados mensuráveis.
-- [Blog](/blog): Conteúdo técnico e estratégico sobre TOTVS, BI, Dados, IA e Cloud.
-- [Carreiras](/carreiras): Oportunidades para trabalhar na DataLynk.
-- [Contato](/contato): Fale com um especialista e solicite um diagnóstico gratuito.
+## Ecossistema TOTVS
+- Hub TOTVS: https://datalynk.com.br/totvs
+- TOTVS RM (Educacional, RH, Financeiro, Compras, Fiscal, Contábil): https://datalynk.com.br/totvs-rm
+- TOTVS Protheus: https://datalynk.com.br/totvs-protheus
+- TOTVS Fluig (automação de processos): https://datalynk.com.br/totvs-fluig
+- Consultoria TOTVS: https://datalynk.com.br/consultoria-totvs
+- Consultoria TOTVS RM: https://datalynk.com.br/consultoria-totvs-rm
+- Implantação TOTVS RM: https://datalynk.com.br/implantacao-totvs-rm
+- Suporte TOTVS RM: https://datalynk.com.br/suporte-totvs-rm
+
+## Outras soluções
+- Soluções: https://datalynk.com.br/solucoes
+- Business Intelligence: https://datalynk.com.br/solucoes/bi
+- Engenharia de Dados: https://datalynk.com.br/solucoes/engenharia-dados
+- Desenvolvimento e IA: https://datalynk.com.br/solucoes/desenvolvimento
+- Suporte em Tecnologia: https://datalynk.com.br/solucoes/suporte
+
+## Institucional
+- Sobre: https://datalynk.com.br/sobre
+- Segmentos atendidos: https://datalynk.com.br/segmentos
+- Cases: https://datalynk.com.br/cases
+- Blog: https://datalynk.com.br/blog
+- Carreiras: https://datalynk.com.br/carreiras
+- Contato: https://datalynk.com.br/contato

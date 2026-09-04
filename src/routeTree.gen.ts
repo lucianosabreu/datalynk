@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TotvsRmRouteImport } from './routes/totvs-rm'
+import { Route as TotvsProtheusRouteImport } from './routes/totvs-protheus'
+import { Route as TotvsFluigRouteImport } from './routes/totvs-fluig'
 import { Route as TotvsRouteImport } from './routes/totvs'
+import { Route as SuporteTotvsRmRouteImport } from './routes/suporte-totvs-rm'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SegmentosRouteImport } from './routes/segmentos'
 import { Route as PortalRouteImport } from './routes/portal'
+import { Route as ImplantacaoTotvsRmRouteImport } from './routes/implantacao-totvs-rm'
 import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as ConsultoriaTotvsRmRouteImport } from './routes/consultoria-totvs-rm'
+import { Route as ConsultoriaTotvsRouteImport } from './routes/consultoria-totvs'
 import { Route as CasesRouteImport } from './routes/cases'
 import { Route as CarreirasRouteImport } from './routes/carreiras'
 import { Route as BlogRouteImport } from './routes/blog'
@@ -34,9 +40,24 @@ const TotvsRmRoute = TotvsRmRouteImport.update({
   path: '/totvs-rm',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TotvsProtheusRoute = TotvsProtheusRouteImport.update({
+  id: '/totvs-protheus',
+  path: '/totvs-protheus',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TotvsFluigRoute = TotvsFluigRouteImport.update({
+  id: '/totvs-fluig',
+  path: '/totvs-fluig',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TotvsRoute = TotvsRouteImport.update({
   id: '/totvs',
   path: '/totvs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SuporteTotvsRmRoute = SuporteTotvsRmRouteImport.update({
+  id: '/suporte-totvs-rm',
+  path: '/suporte-totvs-rm',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SobreRoute = SobreRouteImport.update({
@@ -59,9 +80,24 @@ const PortalRoute = PortalRouteImport.update({
   path: '/portal',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ImplantacaoTotvsRmRoute = ImplantacaoTotvsRmRouteImport.update({
+  id: '/implantacao-totvs-rm',
+  path: '/implantacao-totvs-rm',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContatoRoute = ContatoRouteImport.update({
   id: '/contato',
   path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsultoriaTotvsRmRoute = ConsultoriaTotvsRmRouteImport.update({
+  id: '/consultoria-totvs-rm',
+  path: '/consultoria-totvs-rm',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsultoriaTotvsRoute = ConsultoriaTotvsRouteImport.update({
+  id: '/consultoria-totvs',
+  path: '/consultoria-totvs',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CasesRoute = CasesRouteImport.update({
@@ -130,12 +166,18 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRoute
   '/carreiras': typeof CarreirasRoute
   '/cases': typeof CasesRoute
+  '/consultoria-totvs': typeof ConsultoriaTotvsRoute
+  '/consultoria-totvs-rm': typeof ConsultoriaTotvsRmRoute
   '/contato': typeof ContatoRoute
+  '/implantacao-totvs-rm': typeof ImplantacaoTotvsRmRoute
   '/portal': typeof PortalRoute
   '/segmentos': typeof SegmentosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
+  '/suporte-totvs-rm': typeof SuporteTotvsRmRoute
   '/totvs': typeof TotvsRoute
+  '/totvs-fluig': typeof TotvsFluigRoute
+  '/totvs-protheus': typeof TotvsProtheusRoute
   '/totvs-rm': typeof TotvsRmRoute
   '/api/contact': typeof ApiContactRoute
   '/solucoes/bi': typeof SolucoesBiRoute
@@ -151,12 +193,18 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRoute
   '/carreiras': typeof CarreirasRoute
   '/cases': typeof CasesRoute
+  '/consultoria-totvs': typeof ConsultoriaTotvsRoute
+  '/consultoria-totvs-rm': typeof ConsultoriaTotvsRmRoute
   '/contato': typeof ContatoRoute
+  '/implantacao-totvs-rm': typeof ImplantacaoTotvsRmRoute
   '/portal': typeof PortalRoute
   '/segmentos': typeof SegmentosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
+  '/suporte-totvs-rm': typeof SuporteTotvsRmRoute
   '/totvs': typeof TotvsRoute
+  '/totvs-fluig': typeof TotvsFluigRoute
+  '/totvs-protheus': typeof TotvsProtheusRoute
   '/totvs-rm': typeof TotvsRmRoute
   '/api/contact': typeof ApiContactRoute
   '/solucoes/bi': typeof SolucoesBiRoute
@@ -173,12 +221,18 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/carreiras': typeof CarreirasRoute
   '/cases': typeof CasesRoute
+  '/consultoria-totvs': typeof ConsultoriaTotvsRoute
+  '/consultoria-totvs-rm': typeof ConsultoriaTotvsRmRoute
   '/contato': typeof ContatoRoute
+  '/implantacao-totvs-rm': typeof ImplantacaoTotvsRmRoute
   '/portal': typeof PortalRoute
   '/segmentos': typeof SegmentosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
+  '/suporte-totvs-rm': typeof SuporteTotvsRmRoute
   '/totvs': typeof TotvsRoute
+  '/totvs-fluig': typeof TotvsFluigRoute
+  '/totvs-protheus': typeof TotvsProtheusRoute
   '/totvs-rm': typeof TotvsRmRoute
   '/api/contact': typeof ApiContactRoute
   '/solucoes/bi': typeof SolucoesBiRoute
@@ -196,12 +250,18 @@ export interface FileRouteTypes {
     | '/blog'
     | '/carreiras'
     | '/cases'
+    | '/consultoria-totvs'
+    | '/consultoria-totvs-rm'
     | '/contato'
+    | '/implantacao-totvs-rm'
     | '/portal'
     | '/segmentos'
     | '/sitemap.xml'
     | '/sobre'
+    | '/suporte-totvs-rm'
     | '/totvs'
+    | '/totvs-fluig'
+    | '/totvs-protheus'
     | '/totvs-rm'
     | '/api/contact'
     | '/solucoes/bi'
@@ -217,12 +277,18 @@ export interface FileRouteTypes {
     | '/blog'
     | '/carreiras'
     | '/cases'
+    | '/consultoria-totvs'
+    | '/consultoria-totvs-rm'
     | '/contato'
+    | '/implantacao-totvs-rm'
     | '/portal'
     | '/segmentos'
     | '/sitemap.xml'
     | '/sobre'
+    | '/suporte-totvs-rm'
     | '/totvs'
+    | '/totvs-fluig'
+    | '/totvs-protheus'
     | '/totvs-rm'
     | '/api/contact'
     | '/solucoes/bi'
@@ -238,12 +304,18 @@ export interface FileRouteTypes {
     | '/blog'
     | '/carreiras'
     | '/cases'
+    | '/consultoria-totvs'
+    | '/consultoria-totvs-rm'
     | '/contato'
+    | '/implantacao-totvs-rm'
     | '/portal'
     | '/segmentos'
     | '/sitemap.xml'
     | '/sobre'
+    | '/suporte-totvs-rm'
     | '/totvs'
+    | '/totvs-fluig'
+    | '/totvs-protheus'
     | '/totvs-rm'
     | '/api/contact'
     | '/solucoes/bi'
@@ -260,12 +332,18 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   CarreirasRoute: typeof CarreirasRoute
   CasesRoute: typeof CasesRoute
+  ConsultoriaTotvsRoute: typeof ConsultoriaTotvsRoute
+  ConsultoriaTotvsRmRoute: typeof ConsultoriaTotvsRmRoute
   ContatoRoute: typeof ContatoRoute
+  ImplantacaoTotvsRmRoute: typeof ImplantacaoTotvsRmRoute
   PortalRoute: typeof PortalRoute
   SegmentosRoute: typeof SegmentosRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SobreRoute: typeof SobreRoute
+  SuporteTotvsRmRoute: typeof SuporteTotvsRmRoute
   TotvsRoute: typeof TotvsRoute
+  TotvsFluigRoute: typeof TotvsFluigRoute
+  TotvsProtheusRoute: typeof TotvsProtheusRoute
   TotvsRmRoute: typeof TotvsRmRoute
   ApiContactRoute: typeof ApiContactRoute
   SolucoesBiRoute: typeof SolucoesBiRoute
@@ -286,11 +364,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TotvsRmRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/totvs-protheus': {
+      id: '/totvs-protheus'
+      path: '/totvs-protheus'
+      fullPath: '/totvs-protheus'
+      preLoaderRoute: typeof TotvsProtheusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/totvs-fluig': {
+      id: '/totvs-fluig'
+      path: '/totvs-fluig'
+      fullPath: '/totvs-fluig'
+      preLoaderRoute: typeof TotvsFluigRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/totvs': {
       id: '/totvs'
       path: '/totvs'
       fullPath: '/totvs'
       preLoaderRoute: typeof TotvsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/suporte-totvs-rm': {
+      id: '/suporte-totvs-rm'
+      path: '/suporte-totvs-rm'
+      fullPath: '/suporte-totvs-rm'
+      preLoaderRoute: typeof SuporteTotvsRmRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sobre': {
@@ -321,11 +420,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PortalRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/implantacao-totvs-rm': {
+      id: '/implantacao-totvs-rm'
+      path: '/implantacao-totvs-rm'
+      fullPath: '/implantacao-totvs-rm'
+      preLoaderRoute: typeof ImplantacaoTotvsRmRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contato': {
       id: '/contato'
       path: '/contato'
       fullPath: '/contato'
       preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consultoria-totvs-rm': {
+      id: '/consultoria-totvs-rm'
+      path: '/consultoria-totvs-rm'
+      fullPath: '/consultoria-totvs-rm'
+      preLoaderRoute: typeof ConsultoriaTotvsRmRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consultoria-totvs': {
+      id: '/consultoria-totvs'
+      path: '/consultoria-totvs'
+      fullPath: '/consultoria-totvs'
+      preLoaderRoute: typeof ConsultoriaTotvsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cases': {
@@ -420,12 +540,18 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   CarreirasRoute: CarreirasRoute,
   CasesRoute: CasesRoute,
+  ConsultoriaTotvsRoute: ConsultoriaTotvsRoute,
+  ConsultoriaTotvsRmRoute: ConsultoriaTotvsRmRoute,
   ContatoRoute: ContatoRoute,
+  ImplantacaoTotvsRmRoute: ImplantacaoTotvsRmRoute,
   PortalRoute: PortalRoute,
   SegmentosRoute: SegmentosRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SobreRoute: SobreRoute,
+  SuporteTotvsRmRoute: SuporteTotvsRmRoute,
   TotvsRoute: TotvsRoute,
+  TotvsFluigRoute: TotvsFluigRoute,
+  TotvsProtheusRoute: TotvsProtheusRoute,
   TotvsRmRoute: TotvsRmRoute,
   ApiContactRoute: ApiContactRoute,
   SolucoesBiRoute: SolucoesBiRoute,

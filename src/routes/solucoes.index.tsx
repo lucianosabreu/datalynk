@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Boxes, Building2, BarChart3, Database, Code2, Cloud, ArrowRight } from "lucide-react";
+import { Workflow, Boxes, Building2, BarChart3, Database, Code2, Cloud, ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHero } from "@/components/site/PageHero";
 
@@ -18,8 +18,9 @@ export const Route = createFileRoute("/solucoes/")({
 });
 
 const solutions = [
-  { icon: Boxes, title: "TOTVS RM", desc: "Implantação e sustentação em Educação, RH e Backoffice.", to: "/solucoes/totvs-rm" },
-  { icon: Building2, title: "TOTVS Protheus", desc: "Implantação, customização, integração e melhorias.", to: "/solucoes/totvs-protheus" },
+  { icon: Boxes, title: "TOTVS RM", desc: "Implantação e sustentação em Educação, RH e Backoffice.", to: "/totvs-rm" },
+  { icon: Building2, title: "TOTVS Protheus", desc: "Implantação, customização, integração e melhorias.", to: "/totvs-protheus" },
+  { icon: Workflow, title: "TOTVS Fluig", desc: "Automação de processos, workflows e portais corporativos.", to: "/totvs-fluig" },
   { icon: BarChart3, title: "Business Intelligence", desc: "Power BI, dashboards, analytics e KPIs.", to: "/solucoes/bi" },
   { icon: Database, title: "Engenharia de Dados", desc: "Data Lake, DW, ETL, governança e integrações.", to: "/solucoes/engenharia-dados" },
   { icon: Code2, title: "Desenvolvimento", desc: "Web, Apps, APIs, integrações, IA e automação.", to: "/solucoes/desenvolvimento" },
