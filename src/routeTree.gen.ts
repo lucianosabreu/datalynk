@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TotvsRmRouteImport } from './routes/totvs-rm'
+import { Route as TotvsProtheusRouteImport } from './routes/totvs-protheus'
 import { Route as TotvsRouteImport } from './routes/totvs'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
@@ -32,6 +33,11 @@ import { Route as ApiContactRouteImport } from './routes/api/contact'
 const TotvsRmRoute = TotvsRmRouteImport.update({
   id: '/totvs-rm',
   path: '/totvs-rm',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TotvsProtheusRoute = TotvsProtheusRouteImport.update({
+  id: '/totvs-protheus',
+  path: '/totvs-protheus',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TotvsRoute = TotvsRouteImport.update({
@@ -136,6 +142,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
   '/totvs': typeof TotvsRoute
+  '/totvs-protheus': typeof TotvsProtheusRoute
   '/totvs-rm': typeof TotvsRmRoute
   '/api/contact': typeof ApiContactRoute
   '/solucoes/bi': typeof SolucoesBiRoute
@@ -157,6 +164,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
   '/totvs': typeof TotvsRoute
+  '/totvs-protheus': typeof TotvsProtheusRoute
   '/totvs-rm': typeof TotvsRmRoute
   '/api/contact': typeof ApiContactRoute
   '/solucoes/bi': typeof SolucoesBiRoute
@@ -179,6 +187,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
   '/totvs': typeof TotvsRoute
+  '/totvs-protheus': typeof TotvsProtheusRoute
   '/totvs-rm': typeof TotvsRmRoute
   '/api/contact': typeof ApiContactRoute
   '/solucoes/bi': typeof SolucoesBiRoute
@@ -202,6 +211,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/sobre'
     | '/totvs'
+    | '/totvs-protheus'
     | '/totvs-rm'
     | '/api/contact'
     | '/solucoes/bi'
@@ -223,6 +233,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/sobre'
     | '/totvs'
+    | '/totvs-protheus'
     | '/totvs-rm'
     | '/api/contact'
     | '/solucoes/bi'
@@ -244,6 +255,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/sobre'
     | '/totvs'
+    | '/totvs-protheus'
     | '/totvs-rm'
     | '/api/contact'
     | '/solucoes/bi'
@@ -266,6 +278,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SobreRoute: typeof SobreRoute
   TotvsRoute: typeof TotvsRoute
+  TotvsProtheusRoute: typeof TotvsProtheusRoute
   TotvsRmRoute: typeof TotvsRmRoute
   ApiContactRoute: typeof ApiContactRoute
   SolucoesBiRoute: typeof SolucoesBiRoute
@@ -284,6 +297,13 @@ declare module '@tanstack/react-router' {
       path: '/totvs-rm'
       fullPath: '/totvs-rm'
       preLoaderRoute: typeof TotvsRmRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/totvs-protheus': {
+      id: '/totvs-protheus'
+      path: '/totvs-protheus'
+      fullPath: '/totvs-protheus'
+      preLoaderRoute: typeof TotvsProtheusRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/totvs': {
@@ -426,6 +446,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SobreRoute: SobreRoute,
   TotvsRoute: TotvsRoute,
+  TotvsProtheusRoute: TotvsProtheusRoute,
   TotvsRmRoute: TotvsRmRoute,
   ApiContactRoute: ApiContactRoute,
   SolucoesBiRoute: SolucoesBiRoute,
