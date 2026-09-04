@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Calendar, Tag } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHero } from "@/components/site/PageHero";
@@ -26,6 +26,19 @@ const posts = [
   { cat: "Tecnologia", title: "Como preparar sua empresa para a Transformação Digital", date: "05 Abr 2026", excerpt: "Um guia executivo com os passos essenciais." },
 ];
 
+const categories = [
+  { label: "TOTVS", to: "/totvs" as const },
+  { label: "TOTVS RM", to: "/totvs-rm" as const },
+  { label: "TOTVS Protheus", to: "/totvs-protheus" as const },
+  { label: "TOTVS Fluig", to: "/totvs-fluig" as const },
+  { label: "Consultoria TOTVS", to: "/consultoria-totvs" as const },
+  { label: "Implantação TOTVS RM", to: "/implantacao-totvs-rm" as const },
+  { label: "Suporte TOTVS RM", to: "/suporte-totvs-rm" as const },
+  { label: "Business Intelligence", to: "/solucoes/bi" as const },
+  { label: "Engenharia de Dados", to: "/solucoes/engenharia-dados" as const },
+  { label: "Carreira TOTVS", to: "/carreiras" as const },
+];
+
 function BlogPage() {
   return (
     <SiteLayout>
@@ -34,6 +47,26 @@ function BlogPage() {
         title={<>Conteúdo que gera <span className="text-accent-orange">inteligência</span></>}
         description="Insights, tendências e boas práticas em tecnologia corporativa."
       />
+      <section className="py-16 bg-white border-b border-border/60">
+        <div className="container-page">
+          <h2 className="font-display font-bold text-2xl text-brand">Categorias</h2>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Navegue pelos temas que a DataLynk domina e acesse as páginas de especialidade.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3 text-sm">
+            {categories.map((c) => (
+              <Link
+                key={c.label}
+                to={c.to}
+                className="rounded-full border border-border bg-white px-4 py-2 font-medium text-brand transition hover:border-accent-orange hover:text-accent-orange"
+              >
+                {c.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 bg-surface">
         <div className="container-page grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((p) => (
