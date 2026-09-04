@@ -43,8 +43,10 @@ export function Footer() {
             Soluções
           </h4>
           <ul className="space-y-2.5 text-sm text-white/85">
-            <li><Link to="/solucoes/totvs-rm" className="hover:text-accent-orange">TOTVS RM</Link></li>
-            <li><Link to="/solucoes/totvs-protheus" className="hover:text-accent-orange">TOTVS Protheus</Link></li>
+            <li><Link to="/totvs" className="hover:text-accent-orange">Consultoria TOTVS</Link></li>
+            <li><Link to="/totvs-rm" className="hover:text-accent-orange">TOTVS RM</Link></li>
+            <li><Link to="/totvs-protheus" className="hover:text-accent-orange">TOTVS Protheus</Link></li>
+            <li><Link to="/totvs-fluig" className="hover:text-accent-orange">TOTVS Fluig</Link></li>
             <li><Link to="/solucoes/bi" className="hover:text-accent-orange">Business Intelligence</Link></li>
             <li><Link to="/solucoes/engenharia-dados" className="hover:text-accent-orange">Engenharia de Dados</Link></li>
             <li><Link to="/solucoes/desenvolvimento" className="hover:text-accent-orange">Desenvolvimento</Link></li>
@@ -58,6 +60,8 @@ export function Footer() {
             Empresa
           </h4>
           <ul className="space-y-2.5 text-sm text-white/85">
+            <li><Link to="/implantacao-totvs-rm" className="hover:text-accent-orange">Implantação TOTVS RM</Link></li>
+            <li><Link to="/suporte-totvs-rm" className="hover:text-accent-orange">Suporte TOTVS RM</Link></li>
             <li><Link to="/sobre" className="hover:text-accent-orange">Sobre Nós</Link></li>
             <li><Link to="/cases" className="hover:text-accent-orange">Cases</Link></li>
             <li><Link to="/segmentos" className="hover:text-accent-orange">Segmentos</Link></li>

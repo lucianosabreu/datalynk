@@ -11,6 +11,7 @@ export const Route = createFileRoute("/portal")({
       { property: "og:title", content: "Portal do Cliente | DataLynk" },
       { property: "og:description", content: "Acesse o Portal do Cliente DataLynk: chamados, projetos, horas consumidas, dashboards e documentos." },
       { property: "og:url", content: "https://datalynk.com.br/portal" },
+      { name: "robots", content: "noindex, follow" },
     ],
     links: [{ rel: "canonical", href: "https://datalynk.com.br/portal" }],
   }),
