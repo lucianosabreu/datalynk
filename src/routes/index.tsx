@@ -173,10 +173,10 @@ function HomePage() {
       <section className="bg-white border-b border-border">
         <div className="container-page py-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center">
           {[
-            { k: "+20", l: "anos de experiência" },
+            { k: "+10", l: "anos de experiência" },
             { k: "+300", l: "projetos entregues" },
             { k: "98%", l: "clientes satisfeitos" },
-            { k: "TOTVS", l: "especialistas certificados" },
+            { k: "TOTVS", l: "ESPECIALISTAS DE MERCADO" },
             { k: "BI", l: "Power BI & Analytics" },
             { k: "Data", l: "Engenharia de Dados" },
           ].map((s) => (
