@@ -58,6 +58,7 @@ export const Route = createFileRoute("/")({
 const solutions = [
   { icon: Boxes, title: "TOTVS RM", desc: "Implantação, sustentação e evolução do TOTVS RM em Educação, RH e Backoffice.", to: "/totvs-rm" },
   { icon: Building2, title: "TOTVS Protheus", desc: "Consultoria completa em Protheus: implantação, customização e integrações.", to: "/totvs-protheus" },
+  { icon: Workflow, title: "TOTVS Fluig", desc: "Automação de processos, workflows, gestão documental e integrações com o ERP TOTVS.", to: "/totvs-fluig" },
   { icon: BarChart3, title: "Business Intelligence", desc: "Dashboards, Power BI, KPIs e analytics para decisões orientadas por dados.", to: "/solucoes/bi" },
   { icon: Database, title: "Engenharia de Dados", desc: "Data Lake, Data Warehouse, ETL, governança e integrações em escala.", to: "/solucoes/engenharia-dados" },
   { icon: Code2, title: "Desenvolvimento", desc: "Sistemas Web, aplicativos, APIs e automações sob medida.", to: "/solucoes/desenvolvimento" },
