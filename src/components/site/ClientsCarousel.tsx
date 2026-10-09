@@ -3,6 +3,9 @@ import methasa from "@/assets/clients/holding_methasa_logo.jpg.asset.json";
 import kpe from "@/assets/clients/kpe.png.asset.json";
 import mks from "@/assets/clients/logo_MKS.png.asset.json";
 import finvest from "@/assets/clients/logo-finvest-digital.png.asset.json";
+import ub from "@/assets/clients/logo_ub.png.asset.json";
+import naturalle from "@/assets/clients/logo_naturalle_RGB.png.asset.json";
+import uniesp from "@/assets/clients/Logo_Uniesp.png.asset.json";
 
 /**
  * Para adicionar ou remover clientes, basta editar esta lista.
@@ -14,6 +17,9 @@ const clients = [
   { name: "KPE Engenharia", src: kpe.url },
   { name: "MKS Soluções Integradas", src: mks.url },
   { name: "Finvest Digital", src: finvest.url },
+  { name: "UB", src: ub.url },
+  { name: "Naturalle", src: naturalle.url },
+  { name: "UNIESP", src: uniesp.url },
 ];
 
 function LogoTrack({ ariaHidden }: { ariaHidden?: boolean }) {
