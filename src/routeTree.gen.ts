@@ -9,105 +9,35 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as BlogRouteImport } from './routes/blog'
-import { Route as CarreirasRouteImport } from './routes/carreiras'
-import { Route as CasesRouteImport } from './routes/cases'
-import { Route as ConsultoriaTotvsRouteImport } from './routes/consultoria-totvs'
-import { Route as ConsultoriaTotvsRmRouteImport } from './routes/consultoria-totvs-rm'
-import { Route as ContatoRouteImport } from './routes/contato'
-import { Route as ImplantacaoTotvsRmRouteImport } from './routes/implantacao-totvs-rm'
-import { Route as PortalRouteImport } from './routes/portal'
-import { Route as SegmentosRouteImport } from './routes/segmentos'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as SobreRouteImport } from './routes/sobre'
-import { Route as SuporteTotvsRmRouteImport } from './routes/suporte-totvs-rm'
-import { Route as TotvsRouteImport } from './routes/totvs'
-import { Route as TotvsFluigRouteImport } from './routes/totvs-fluig'
-import { Route as TotvsProtheusRouteImport } from './routes/totvs-protheus'
 import { Route as TotvsRmRouteImport } from './routes/totvs-rm'
-import { Route as ApiContactRouteImport } from './routes/api/contact'
+import { Route as TotvsProtheusRouteImport } from './routes/totvs-protheus'
+import { Route as TotvsFluigRouteImport } from './routes/totvs-fluig'
+import { Route as TotvsRouteImport } from './routes/totvs'
+import { Route as SuporteTotvsRmRouteImport } from './routes/suporte-totvs-rm'
+import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SegmentosRouteImport } from './routes/segmentos'
+import { Route as PortalRouteImport } from './routes/portal'
+import { Route as ImplantacaoTotvsRmRouteImport } from './routes/implantacao-totvs-rm'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as ConsultoriaTotvsRmRouteImport } from './routes/consultoria-totvs-rm'
+import { Route as ConsultoriaTotvsRouteImport } from './routes/consultoria-totvs'
+import { Route as CasesRouteImport } from './routes/cases'
+import { Route as CarreirasRouteImport } from './routes/carreiras'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as IndexRouteImport } from './routes/index'
 import { Route as SolucoesIndexRouteImport } from './routes/solucoes.index'
-import { Route as SolucoesBiRouteImport } from './routes/solucoes.bi'
-import { Route as SolucoesDesenvolvimentoRouteImport } from './routes/solucoes.desenvolvimento'
-import { Route as SolucoesEngenhariaDadosRouteImport } from './routes/solucoes.engenharia-dados'
-import { Route as SolucoesSuporteRouteImport } from './routes/solucoes.suporte'
-import { Route as SolucoesTotvsProtheusRouteImport } from './routes/solucoes.totvs-protheus'
 import { Route as SolucoesTotvsRmRouteImport } from './routes/solucoes.totvs-rm'
+import { Route as SolucoesTotvsProtheusRouteImport } from './routes/solucoes.totvs-protheus'
+import { Route as SolucoesSuporteRouteImport } from './routes/solucoes.suporte'
+import { Route as SolucoesEngenhariaDadosRouteImport } from './routes/solucoes.engenharia-dados'
+import { Route as SolucoesDesenvolvimentoRouteImport } from './routes/solucoes.desenvolvimento'
+import { Route as SolucoesBiRouteImport } from './routes/solucoes.bi'
+import { Route as ApiContactRouteImport } from './routes/api/contact'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogRoute = BlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CarreirasRoute = CarreirasRouteImport.update({
-  id: '/carreiras',
-  path: '/carreiras',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CasesRoute = CasesRouteImport.update({
-  id: '/cases',
-  path: '/cases',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ConsultoriaTotvsRoute = ConsultoriaTotvsRouteImport.update({
-  id: '/consultoria-totvs',
-  path: '/consultoria-totvs',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ConsultoriaTotvsRmRoute = ConsultoriaTotvsRmRouteImport.update({
-  id: '/consultoria-totvs-rm',
-  path: '/consultoria-totvs-rm',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContatoRoute = ContatoRouteImport.update({
-  id: '/contato',
-  path: '/contato',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ImplantacaoTotvsRmRoute = ImplantacaoTotvsRmRouteImport.update({
-  id: '/implantacao-totvs-rm',
-  path: '/implantacao-totvs-rm',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PortalRoute = PortalRouteImport.update({
-  id: '/portal',
-  path: '/portal',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SegmentosRoute = SegmentosRouteImport.update({
-  id: '/segmentos',
-  path: '/segmentos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SobreRoute = SobreRouteImport.update({
-  id: '/sobre',
-  path: '/sobre',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SuporteTotvsRmRoute = SuporteTotvsRmRouteImport.update({
-  id: '/suporte-totvs-rm',
-  path: '/suporte-totvs-rm',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TotvsRoute = TotvsRouteImport.update({
-  id: '/totvs',
-  path: '/totvs',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TotvsFluigRoute = TotvsFluigRouteImport.update({
-  id: '/totvs-fluig',
-  path: '/totvs-fluig',
+const TotvsRmRoute = TotvsRmRouteImport.update({
+  id: '/totvs-rm',
+  path: '/totvs-rm',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TotvsProtheusRoute = TotvsProtheusRouteImport.update({
@@ -115,14 +45,79 @@ const TotvsProtheusRoute = TotvsProtheusRouteImport.update({
   path: '/totvs-protheus',
   getParentRoute: () => rootRouteImport,
 } as any)
-const TotvsRmRoute = TotvsRmRouteImport.update({
-  id: '/totvs-rm',
-  path: '/totvs-rm',
+const TotvsFluigRoute = TotvsFluigRouteImport.update({
+  id: '/totvs-fluig',
+  path: '/totvs-fluig',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiContactRoute = ApiContactRouteImport.update({
-  id: '/api/contact',
-  path: '/api/contact',
+const TotvsRoute = TotvsRouteImport.update({
+  id: '/totvs',
+  path: '/totvs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SuporteTotvsRmRoute = SuporteTotvsRmRouteImport.update({
+  id: '/suporte-totvs-rm',
+  path: '/suporte-totvs-rm',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SobreRoute = SobreRouteImport.update({
+  id: '/sobre',
+  path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SegmentosRoute = SegmentosRouteImport.update({
+  id: '/segmentos',
+  path: '/segmentos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortalRoute = PortalRouteImport.update({
+  id: '/portal',
+  path: '/portal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImplantacaoTotvsRmRoute = ImplantacaoTotvsRmRouteImport.update({
+  id: '/implantacao-totvs-rm',
+  path: '/implantacao-totvs-rm',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsultoriaTotvsRmRoute = ConsultoriaTotvsRmRouteImport.update({
+  id: '/consultoria-totvs-rm',
+  path: '/consultoria-totvs-rm',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsultoriaTotvsRoute = ConsultoriaTotvsRouteImport.update({
+  id: '/consultoria-totvs',
+  path: '/consultoria-totvs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CasesRoute = CasesRouteImport.update({
+  id: '/cases',
+  path: '/cases',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CarreirasRoute = CarreirasRouteImport.update({
+  id: '/carreiras',
+  path: '/carreiras',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SolucoesIndexRoute = SolucoesIndexRouteImport.update({
@@ -130,24 +125,9 @@ const SolucoesIndexRoute = SolucoesIndexRouteImport.update({
   path: '/solucoes/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SolucoesBiRoute = SolucoesBiRouteImport.update({
-  id: '/solucoes/bi',
-  path: '/solucoes/bi',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SolucoesDesenvolvimentoRoute = SolucoesDesenvolvimentoRouteImport.update({
-  id: '/solucoes/desenvolvimento',
-  path: '/solucoes/desenvolvimento',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SolucoesEngenhariaDadosRoute = SolucoesEngenhariaDadosRouteImport.update({
-  id: '/solucoes/engenharia-dados',
-  path: '/solucoes/engenharia-dados',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SolucoesSuporteRoute = SolucoesSuporteRouteImport.update({
-  id: '/solucoes/suporte',
-  path: '/solucoes/suporte',
+const SolucoesTotvsRmRoute = SolucoesTotvsRmRouteImport.update({
+  id: '/solucoes/totvs-rm',
+  path: '/solucoes/totvs-rm',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SolucoesTotvsProtheusRoute = SolucoesTotvsProtheusRouteImport.update({
@@ -155,9 +135,29 @@ const SolucoesTotvsProtheusRoute = SolucoesTotvsProtheusRouteImport.update({
   path: '/solucoes/totvs-protheus',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SolucoesTotvsRmRoute = SolucoesTotvsRmRouteImport.update({
-  id: '/solucoes/totvs-rm',
-  path: '/solucoes/totvs-rm',
+const SolucoesSuporteRoute = SolucoesSuporteRouteImport.update({
+  id: '/solucoes/suporte',
+  path: '/solucoes/suporte',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolucoesEngenhariaDadosRoute = SolucoesEngenhariaDadosRouteImport.update({
+  id: '/solucoes/engenharia-dados',
+  path: '/solucoes/engenharia-dados',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolucoesDesenvolvimentoRoute = SolucoesDesenvolvimentoRouteImport.update({
+  id: '/solucoes/desenvolvimento',
+  path: '/solucoes/desenvolvimento',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolucoesBiRoute = SolucoesBiRouteImport.update({
+  id: '/solucoes/bi',
+  path: '/solucoes/bi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiContactRoute = ApiContactRouteImport.update({
+  id: '/api/contact',
+  path: '/api/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -357,109 +357,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog': {
-      id: '/blog'
-      path: '/blog'
-      fullPath: '/blog'
-      preLoaderRoute: typeof BlogRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/carreiras': {
-      id: '/carreiras'
-      path: '/carreiras'
-      fullPath: '/carreiras'
-      preLoaderRoute: typeof CarreirasRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cases': {
-      id: '/cases'
-      path: '/cases'
-      fullPath: '/cases'
-      preLoaderRoute: typeof CasesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/consultoria-totvs': {
-      id: '/consultoria-totvs'
-      path: '/consultoria-totvs'
-      fullPath: '/consultoria-totvs'
-      preLoaderRoute: typeof ConsultoriaTotvsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/consultoria-totvs-rm': {
-      id: '/consultoria-totvs-rm'
-      path: '/consultoria-totvs-rm'
-      fullPath: '/consultoria-totvs-rm'
-      preLoaderRoute: typeof ConsultoriaTotvsRmRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contato': {
-      id: '/contato'
-      path: '/contato'
-      fullPath: '/contato'
-      preLoaderRoute: typeof ContatoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/implantacao-totvs-rm': {
-      id: '/implantacao-totvs-rm'
-      path: '/implantacao-totvs-rm'
-      fullPath: '/implantacao-totvs-rm'
-      preLoaderRoute: typeof ImplantacaoTotvsRmRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/portal': {
-      id: '/portal'
-      path: '/portal'
-      fullPath: '/portal'
-      preLoaderRoute: typeof PortalRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/segmentos': {
-      id: '/segmentos'
-      path: '/segmentos'
-      fullPath: '/segmentos'
-      preLoaderRoute: typeof SegmentosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sobre': {
-      id: '/sobre'
-      path: '/sobre'
-      fullPath: '/sobre'
-      preLoaderRoute: typeof SobreRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/suporte-totvs-rm': {
-      id: '/suporte-totvs-rm'
-      path: '/suporte-totvs-rm'
-      fullPath: '/suporte-totvs-rm'
-      preLoaderRoute: typeof SuporteTotvsRmRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/totvs': {
-      id: '/totvs'
-      path: '/totvs'
-      fullPath: '/totvs'
-      preLoaderRoute: typeof TotvsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/totvs-fluig': {
-      id: '/totvs-fluig'
-      path: '/totvs-fluig'
-      fullPath: '/totvs-fluig'
-      preLoaderRoute: typeof TotvsFluigRouteImport
+    '/totvs-rm': {
+      id: '/totvs-rm'
+      path: '/totvs-rm'
+      fullPath: '/totvs-rm'
+      preLoaderRoute: typeof TotvsRmRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/totvs-protheus': {
@@ -469,18 +371,109 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TotvsProtheusRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/totvs-rm': {
-      id: '/totvs-rm'
-      path: '/totvs-rm'
-      fullPath: '/totvs-rm'
-      preLoaderRoute: typeof TotvsRmRouteImport
+    '/totvs-fluig': {
+      id: '/totvs-fluig'
+      path: '/totvs-fluig'
+      fullPath: '/totvs-fluig'
+      preLoaderRoute: typeof TotvsFluigRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/contact': {
-      id: '/api/contact'
-      path: '/api/contact'
-      fullPath: '/api/contact'
-      preLoaderRoute: typeof ApiContactRouteImport
+    '/totvs': {
+      id: '/totvs'
+      path: '/totvs'
+      fullPath: '/totvs'
+      preLoaderRoute: typeof TotvsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/suporte-totvs-rm': {
+      id: '/suporte-totvs-rm'
+      path: '/suporte-totvs-rm'
+      fullPath: '/suporte-totvs-rm'
+      preLoaderRoute: typeof SuporteTotvsRmRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sobre': {
+      id: '/sobre'
+      path: '/sobre'
+      fullPath: '/sobre'
+      preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/segmentos': {
+      id: '/segmentos'
+      path: '/segmentos'
+      fullPath: '/segmentos'
+      preLoaderRoute: typeof SegmentosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portal': {
+      id: '/portal'
+      path: '/portal'
+      fullPath: '/portal'
+      preLoaderRoute: typeof PortalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/implantacao-totvs-rm': {
+      id: '/implantacao-totvs-rm'
+      path: '/implantacao-totvs-rm'
+      fullPath: '/implantacao-totvs-rm'
+      preLoaderRoute: typeof ImplantacaoTotvsRmRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consultoria-totvs-rm': {
+      id: '/consultoria-totvs-rm'
+      path: '/consultoria-totvs-rm'
+      fullPath: '/consultoria-totvs-rm'
+      preLoaderRoute: typeof ConsultoriaTotvsRmRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consultoria-totvs': {
+      id: '/consultoria-totvs'
+      path: '/consultoria-totvs'
+      fullPath: '/consultoria-totvs'
+      preLoaderRoute: typeof ConsultoriaTotvsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cases': {
+      id: '/cases'
+      path: '/cases'
+      fullPath: '/cases'
+      preLoaderRoute: typeof CasesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/carreiras': {
+      id: '/carreiras'
+      path: '/carreiras'
+      fullPath: '/carreiras'
+      preLoaderRoute: typeof CarreirasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/solucoes/': {
@@ -490,32 +483,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SolucoesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/solucoes/bi': {
-      id: '/solucoes/bi'
-      path: '/solucoes/bi'
-      fullPath: '/solucoes/bi'
-      preLoaderRoute: typeof SolucoesBiRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/solucoes/desenvolvimento': {
-      id: '/solucoes/desenvolvimento'
-      path: '/solucoes/desenvolvimento'
-      fullPath: '/solucoes/desenvolvimento'
-      preLoaderRoute: typeof SolucoesDesenvolvimentoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/solucoes/engenharia-dados': {
-      id: '/solucoes/engenharia-dados'
-      path: '/solucoes/engenharia-dados'
-      fullPath: '/solucoes/engenharia-dados'
-      preLoaderRoute: typeof SolucoesEngenhariaDadosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/solucoes/suporte': {
-      id: '/solucoes/suporte'
-      path: '/solucoes/suporte'
-      fullPath: '/solucoes/suporte'
-      preLoaderRoute: typeof SolucoesSuporteRouteImport
+    '/solucoes/totvs-rm': {
+      id: '/solucoes/totvs-rm'
+      path: '/solucoes/totvs-rm'
+      fullPath: '/solucoes/totvs-rm'
+      preLoaderRoute: typeof SolucoesTotvsRmRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/solucoes/totvs-protheus': {
@@ -525,11 +497,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SolucoesTotvsProtheusRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/solucoes/totvs-rm': {
-      id: '/solucoes/totvs-rm'
-      path: '/solucoes/totvs-rm'
-      fullPath: '/solucoes/totvs-rm'
-      preLoaderRoute: typeof SolucoesTotvsRmRouteImport
+    '/solucoes/suporte': {
+      id: '/solucoes/suporte'
+      path: '/solucoes/suporte'
+      fullPath: '/solucoes/suporte'
+      preLoaderRoute: typeof SolucoesSuporteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solucoes/engenharia-dados': {
+      id: '/solucoes/engenharia-dados'
+      path: '/solucoes/engenharia-dados'
+      fullPath: '/solucoes/engenharia-dados'
+      preLoaderRoute: typeof SolucoesEngenhariaDadosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solucoes/desenvolvimento': {
+      id: '/solucoes/desenvolvimento'
+      path: '/solucoes/desenvolvimento'
+      fullPath: '/solucoes/desenvolvimento'
+      preLoaderRoute: typeof SolucoesDesenvolvimentoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solucoes/bi': {
+      id: '/solucoes/bi'
+      path: '/solucoes/bi'
+      fullPath: '/solucoes/bi'
+      preLoaderRoute: typeof SolucoesBiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/contact': {
+      id: '/api/contact'
+      path: '/api/contact'
+      fullPath: '/api/contact'
+      preLoaderRoute: typeof ApiContactRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
